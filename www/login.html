@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css"/>
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/jquery.js"></script>
+
+    <script src="js/ratchet.js"></script>
+
+
+    <style>
+
+        .content{
+            background-color: #000;
+            color: #fff;
+            background-image: url("img/bg-1.jpg");
+            background-size: cover;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="content">
+
+
+
+
+    <div class="content-padded">
+       <div style="margin-top: 120px;">
+           <img src="img/login_logo.png" alt="Trafix Logo" style="max-width: 100%; height: auto;"/>
+           <form>
+               <input type="text" placeholder="Username/Email">
+               <input type="password" placeholder="Password">
+               <button class="btn btn-positive btn-outlined btn-block" id="login_button">Login</button>
+           </form>
+           <p style="text-align: center; font-size: 8px"><a href="#myModalexample" style="color: #dddddd">About Trafix</a></p>
+       </div>
+    </div>
+</div>
+
+
+
+<div id="myModalexample" class="modal">
+    <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#myModalexample"></a>
+        <h1 class="title">Modal</h1>
+    </header>
+
+    <div class="content">
+        <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+        if(localStorage.getItem("auth_token") != null){
+            window.location.href = "homepage.html";
+
+        }
+    });
+    $('#login_button').click(function(e){
+        e.preventDefault();
+//        $.mobile.showPageLoadingMsg();
+        $.ajax({
+            type : 'POST',
+            dataType : 'json',
+            url : 'http://localhost:3000/users/sign_in',
+            data : {
+                user : {
+                    email : "sankalpsingha", //$('input[name="email"]').val(),
+                    password : "sankalp123!@#"//$('input[name="password"]').val()
+                }
+            }
+        }).success(function jsSuccess(data, textStatus, jqXHR){
+//            $.mobile.hidePageLoadingMsg();
+            console.log(data);
+//            console.log(textStatus);
+//            console.log(jqXHR);
+//            localStorage.setItem('auth_token', data.authentication_token);
+//            localStorage.setItem('username', data.name);
+//            localStorage.setItem('credits', data.credits);
+//            localStorage.setItem("rootPage", "home.html");
+//            $.mobile.changePage('home.html', 'slideUp');
+//        }).error(function jsError(jqXHR, textStatus, errorThrown){
+//            $.mobile.hidePageLoadingMsg();
+//            var error = JSON.parse(jqXHR.responseText);
+//            alert(error.message);
+        });
+    });
+
+
+</script>
+
+
+</body>
+</html>
