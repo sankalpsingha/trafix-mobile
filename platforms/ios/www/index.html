@@ -29,31 +29,37 @@
 
 <script>
 
-    checkAuth();
+//    checkAuth();
 
 
+    document.addEventListener('deviceready', onReady, false);
+
+    function onReady(){
+
+// This is the function just for this index page.
+        $(document).ready(function() {
+            console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+            console.log(localStorage.getItem('auth_token'));
+            var next_page;
+            try {
+                if(localStorage.getItem('auth_token')) {
+                    next_page = 'homepage.html';
+                } else {
+                    localStorage.setItem("loginPage", "login.html");
+                    next_page = 'login.html';
+                }
+            } catch (exception) {
+                next_page = 'login.html';
+            } finally {
+                setTimeout(function(){
+                    //$('body').css('backgroundImage','none');
+                    window.location.href = next_page;
+                }, 0);
+            }
+        });
+    }
 
 
-//    $(document).ready(function() {
-//        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
-//        console.log(localStorage.getItem('auth_token'));
-//        var next_page;
-//        try {
-//            if(localStorage.getItem('auth_token')) {
-//                next_page = 'homepage.html';
-//            } else {
-//                localStorage.setItem("loginPage", "login.html");
-//                next_page = 'login.html';
-//            }
-//        } catch (exception) {
-//            next_page = 'login.html';
-//        } finally {
-//            setTimeout(function(){
-//                //$('body').css('backgroundImage','none');
-//                window.location.href = next_page;
-//            }, 0);
-//        }
-//    });
 </script>
 
 </body>
