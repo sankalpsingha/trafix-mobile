@@ -97,8 +97,13 @@
                 }
             }
         }).success(function (data){
-            console.log(data.authentication_token); // Make sure that you remove this after the development is over.
-            alert(data.authentication_token);
+            console.log(JSON.stringify(data)); // Make sure that you remove this after the development is over.
+        //   Lets add the authentication tokens to the local storage.
+
+            localStorage.setItem('auth_token', data.authentication_token);
+            localStorage.setItem('username', data.username);
+            window.location.href = "homepage.html";
+
 
         }).error(function(){
             $('#alert-box').toggle();

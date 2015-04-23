@@ -16,8 +16,13 @@
     <link rel="stylesheet" href="css/theme.css"/>
 
     <!-- Include the compiled Ratchet JS -->
+
+    <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/jquery.js"></script>
     <script src="js/ratchet.js"></script>
+    <script src="js/check_token.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <!-- End of the standard scripts -->
 
 </head>
 <body>
@@ -49,9 +54,9 @@
             <span class="icon icon-search"></span>
             <span class="tab-label">Search</span>
         </a>
-        <a class="tab-item" href="#">
+        <a class="tab-item" href="#" id="log_out">
             <span class="icon icon-gear"></span>
-            <span class="tab-label">Settings</span>
+            <span class="tab-label">Log Out</span>
         </a>
     </nav>
 
@@ -87,6 +92,19 @@
 </div>
 
 
+<script>
+
+    // Lets add the authentication check and the prefilter shizz...
+    checkAuth();
+    prefilter();
+
+    $('#log_out').click(function(){
+        localStorage.clear();
+        window.location.href = "login.html";
+    });
+
+
+</script>
 
 </body>
 </html>
