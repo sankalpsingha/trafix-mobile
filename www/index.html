@@ -18,6 +18,9 @@
     <!-- Include the compiled Ratchet JS -->
     <script src="js/jquery.js"></script>
     <script src="js/ratchet.js"></script>
+    <script src="js/check_token.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
 </head>
 <body>
 
@@ -26,26 +29,26 @@
 
 <script>
 
-    $(document).ready(function() {
-        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
-        console.log(localStorage.getItem('auth_token'));
-        var next_page;
-        try {
-            if(localStorage.getItem('auth_token')) {
-                next_page = 'homepage.html';
-            } else {
-                localStorage.setItem("loginPage", "login.html");
-                next_page = 'login.html';
-            }
-        } catch (exception) {
-            next_page = 'login.html';
-        } finally {
-            setTimeout(function(){
-                //$('body').css('backgroundImage','none');
-                window.location.href = next_page;
-            }, 0);
-        }
-    });
+//    $(document).ready(function() {
+//        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+//        console.log(localStorage.getItem('auth_token'));
+//        var next_page;
+//        try {
+//            if(localStorage.getItem('auth_token')) {
+//                next_page = 'homepage.html';
+//            } else {
+//                localStorage.setItem("loginPage", "login.html");
+//                next_page = 'login.html';
+//            }
+//        } catch (exception) {
+//            next_page = 'login.html';
+//        } finally {
+//            setTimeout(function(){
+//                //$('body').css('backgroundImage','none');
+//                window.location.href = next_page;
+//            }, 0);
+//        }
+//    });
 </script>
 
 </body>

@@ -19,7 +19,7 @@
     <script src="js/jquery.js"></script>
 
     <script src="js/ratchet.js"></script>
-
+    <script type="text/javascript" src="cordova.js"></script>
 
     <style>
 
@@ -28,6 +28,10 @@
             color: #fff;
             background-image: url("img/bg-1.jpg");
             background-size: cover;
+        }
+        
+        form{
+            color: #000000;
         }
 
     </style>
@@ -42,14 +46,18 @@
 
 
     <div class="content-padded">
+
        <div style="margin-top: 120px;">
            <img src="img/login_logo.png" alt="Trafix Logo" style="max-width: 100%; height: auto;"/>
+           <div id="alert-box" style="display: none">
+               <p id="alert-value" style="text-align: center; padding: 10px; border: 2px solid #ffffff"></p>
+           </div>
            <form>
-               <input type="text" placeholder="Username/Email">
-               <input type="password" placeholder="Password">
+               <input type="text" name="email" placeholder="Username/Email">
+               <input type="password" name="password" placeholder="Password">
                <button class="btn btn-positive btn-outlined btn-block" id="login_button">Login</button>
            </form>
-           <p style="text-align: center; font-size: 8px"><a href="#myModalexample" style="color: #dddddd">About Trafix</a></p>
+           <p style="text-align: center; font-size: 11px; margin-top: 30px;"><a href="#myModalexample" style="color: #dddddd">About Trafix</a></p>
        </div>
     </div>
 </div>
@@ -81,27 +89,23 @@
         $.ajax({
             type : 'POST',
             dataType : 'json',
-            url : 'http://localhost:3000/users/sign_in',
+            url : 'http://localhost:3000/session',
             data : {
                 user : {
-                    email : "sankalpsingha", //$('input[name="email"]').val(),
-                    password : "sankalp123!@#"//$('input[name="password"]').val()
+                    email :  $('input[name="email"]').val(),
+                    password : $('input[name="password"]').val()
                 }
             }
-        }).success(function jsSuccess(data, textStatus, jqXHR){
-//            $.mobile.hidePageLoadingMsg();
-            console.log(data);
-//            console.log(textStatus);
-//            console.log(jqXHR);
-//            localStorage.setItem('auth_token', data.authentication_token);
-//            localStorage.setItem('username', data.name);
-//            localStorage.setItem('credits', data.credits);
-//            localStorage.setItem("rootPage", "home.html");
-//            $.mobile.changePage('home.html', 'slideUp');
-//        }).error(function jsError(jqXHR, textStatus, errorThrown){
-//            $.mobile.hidePageLoadingMsg();
-//            var error = JSON.parse(jqXHR.responseText);
-//            alert(error.message);
+        }).success(function (data){
+            console.log(data.authentication_token); // Make sure that you remove this after the development is over.
+            alert(data.authentication_token);
+
+        }).error(function(){
+            $('#alert-box').toggle();
+            $('#alert-value').text('Wrong credentials.');
+            setTimeout(function(){
+                $('#alert-box').toggle();
+            },3000);
         });
     });
 
