@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css"/>
+
+    <!-- Include the compiled Ratchet JS -->
+
+    <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/jquery.js"></script>
+    <script src="js/ratchet.js"></script>
+    <script src="js/check_token.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
+
+</head>
+<body>
+
+<!-- Make sure all your bars are the first things in your <body> -->
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-compose pull-right"></a>
+    <h1 class="title">Trafix</h1>
+</header>
+<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+<div class="content">
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">Home</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-person"></span>
+            <span class="tab-label">Profile</span>
+        </a>
+        <a class="tab-item" href="#" id="log_out">
+            <span class="icon icon-gear"></span>
+            <span class="tab-label">Log Out</span>
+        </a>
+    </nav>
+    <h5 style="text-align: center;">Add New Sample</h5>
+    <p class="content-padded">  </p>
+    <div class="row" style="padding: 10px; margin-bottom: 12%">
+    <form>
+        <input type="text" placeholder="Sample Number">
+        <input type="text" placeholder="Sample Date">
+        <input type="text" placeholder="Enter Value Of h2">
+<input type="text" placeholder="Enter Value Of c2h4">
+<input type="text" placeholder="Enter Value Of Source Type">
+<input type="text" placeholder="Enter Value Of c2h2">
+<input type="text" placeholder="Enter Value Of ch4">
+<input type="text" placeholder="Enter Value Of co">
+<input type="text" placeholder="Enter Value Of c2h6">
+<input type="text" placeholder="Enter Value Of o2">
+<input type="text" placeholder="Enter Value Of co2">
+<input type="text" placeholder="Enter Value Of moisture">
+
+
+        <button class="btn btn-positive btn-block">Create Sample</button>
+    </form>
+    </div>
+</div>
+
+
+<script>
+
+    // Lets add the authentication check and the prefilter shizz...
+    //    checkAuth();
+    //    prefilter();
+    //
+    //    $('#log_out').click(function(){
+    //        localStorage.clear();
+    //        window.location.href = "login.html";
+    //    });
+
+
+</script>
+
+</body>
+</html>

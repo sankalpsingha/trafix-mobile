@@ -35,8 +35,6 @@
 </header>
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
-
-
     <nav class="bar bar-tab">
         <a class="tab-item active" href="#">
             <span class="icon icon-home"></span>
@@ -46,46 +44,90 @@
             <span class="icon icon-person"></span>
             <span class="tab-label">Profile</span>
         </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-star-filled"></span>
-            <span class="tab-label">Favorites</span>
-        </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-search"></span>
-            <span class="tab-label">Search</span>
-        </a>
         <a class="tab-item" href="#" id="log_out">
             <span class="icon icon-gear"></span>
             <span class="tab-label">Log Out</span>
         </a>
     </nav>
-
-
-    <p class="content-padded">This is a test application.</p>
+    <p class="content-padded"> My Assets </p>
     <div class="card">
         <ul class="table-view">
-            <li class="table-view-cell">
-                <a class="push-right" href="http://goratchet.com">
-                    <strong>Some Trafix Shit</strong>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="img/health.jpg" width="100">
+                    <div class="media-body">
+                      <h5> IVTR 1023INT</h5>
+                        <small>Serial No: ivtr2001001</small>
+                        <br/>
+                        <small>Last DGA: 31.02.1992</small>
+                        <br/>
+                    </div>
+                    <span class="badge">5 Samples</span>
                 </a>
+                <div class="segmented-control" style="margin-top: 20px;">
+                    <a class="control-item active" href="#item1mobile">
+                        Add Sample
+                    </a>
+                    <a class="control-item" href="#item2mobile">
+                        View Asset
+                    </a>
+                    <a class="control-item" href="#item3mobile">
+                        View Location
+                    </a>
+                </div>
             </li>
-            <li class="table-view-cell">
-                <a class="push-right" href="https://github.com/twbs/ratchet/">
-                    <strong>Some Trafix Shit</strong>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="img/health2.gif" width="100">
+                    <div class="media-body">
+                        <h5> IVTR 1023</h5>
+                        <small>Serial No: ivtr2001</small>
+                        <br/>
+                        <small>Last DGA: 13.02.1992</small>
+                        <br/>
+                    </div>
 
+                    <span class="badge">18 Samples</span>
                 </a>
+                <div class="segmented-control" style="margin-top: 20px;">
+                    <a class="control-item active" href="#item1mobile">
+                        Add Sample
+                    </a>
+                    <a class="control-item" href="#item2mobile">
+                        View Asset
+                    </a>
+                    <a class="control-item" href="#item3mobile">
+                        View Location
+                    </a>
+                </div>
             </li>
-            <li class="table-view-cell">
-                <a class="push-right" href="https://groups.google.com/forum/#!forum/goratchet">
-                    <strong>Some Trafix Shit</strong>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="img/red.gif" width="100">
+                    <div class="media-body">
+                        <h5> IVTR 1301023</h5>
+                        <small>Serial No: Trans22001</small>
+                        <br/>
+                        <small>Last DGA: 13.02.1992</small>
+                        <br/>
+                        <p></p>
 
-                </a>
-            </li>
-            <li class="table-view-cell">
-                <a class="push-right" href="https://twitter.com/goratchet">
-                    <strong>Some Trafix Shit</strong>
 
+                    </div>
+
+                    <span class="badge">10 Samples</span>
                 </a>
+                <div class="segmented-control" style="margin-top: 20px;">
+                    <a class="control-item active" href="#item1mobile">
+                        Add Sample
+                    </a>
+                    <a class="control-item" href="#item2mobile">
+                        View Asset
+                    </a>
+                    <a class="control-item" href="#item3mobile">
+                        View Location
+                    </a>
+                </div>
             </li>
         </ul>
     </div>
@@ -95,13 +137,13 @@
 <script>
 
     // Lets add the authentication check and the prefilter shizz...
-    checkAuth();
-    prefilter();
-
-    $('#log_out').click(function(){
-        localStorage.clear();
-        window.location.href = "login.html";
-    });
+//    checkAuth();
+//    prefilter();
+//
+//    $('#log_out').click(function(){
+//        localStorage.clear();
+//        window.location.href = "login.html";
+//    });
 
 
 </script>

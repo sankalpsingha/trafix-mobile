@@ -946,12 +946,7 @@ select {
 .segmented-control .control-item:first-child {
   border-left-width: 0;
 }
-.segmented-control .control-item:active {
-  background-color: #eee;
-}
-.segmented-control .control-item.active {
-  background-color: #ccc;
-}
+
 
 .segmented-control-primary {
   border-color: #428bca;
@@ -990,13 +985,7 @@ select {
   color: #d9534f;
   border-color: inherit;
 }
-.segmented-control-negative .control-item:active {
-  background-color: #f9e2e2;
-}
-.segmented-control-negative .control-item.active {
-  color: #fff;
-  background-color: #d9534f;
-}
+
 
 .control-content {
   display: none;

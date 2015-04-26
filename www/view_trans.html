@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+
+
+    <!-- Include the compiled Ratchet JS -->
+
+    <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/jquery.js"></script>
+    <script src="js/ratchet.js"></script>
+    <script src="js/check_token.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <style>
+
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            padding: 0;
+        }
+        .table {
+            border-collapse: collapse !important;
+        }
+        .table td,
+        .table th {
+            background-color: #fff !important;
+        }
+
+        table {
+            background-color: transparent;
+        }
+        caption {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: #777;
+            text-align: left;
+        }
+        th {
+            text-align: left;
+        }
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .table > thead > tr > th,
+        .table > tbody > tr > th,
+        .table > tfoot > tr > th,
+        .table > thead > tr > td,
+        .table > tbody > tr > td,
+        .table > tfoot > tr > td {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid #ddd;
+        }
+        .table > thead > tr > th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #ddd;
+        }
+        .table > caption + thead > tr:first-child > th,
+        .table > colgroup + thead > tr:first-child > th,
+        .table > thead:first-child > tr:first-child > th,
+        .table > caption + thead > tr:first-child > td,
+        .table > colgroup + thead > tr:first-child > td,
+        .table > thead:first-child > tr:first-child > td {
+            border-top: 0;
+        }
+        .table > tbody + tbody {
+            border-top: 2px solid #ddd;
+        }
+        .table .table {
+            background-color: #fff;
+        }
+
+
+        .table > thead > tr > td.active,
+        .table > tbody > tr > td.active,
+        .table > tfoot > tr > td.active,
+        .table > thead > tr > th.active,
+        .table > tbody > tr > th.active,
+        .table > tfoot > tr > th.active,
+        .table > thead > tr.active > td,
+        .table > tbody > tr.active > td,
+        .table > tfoot > tr.active > td,
+        .table > thead > tr.active > th,
+        .table > tbody > tr.active > th,
+        .table > tfoot > tr.active > th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Make sure all your bars are the first things in your <body> -->
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-compose pull-right"></a>
+    <h1 class="title">Trafix</h1>
+</header>
+<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+<div class="content">
+    <nav class="bar bar-tab">
+        <a class="tab-item " href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">Home</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-person"></span>
+            <span class="tab-label">Profile</span>
+        </a>
+        <a class="tab-item" href="#" id="log_out">
+            <span class="icon icon-gear"></span>
+            <span class="tab-label">Log Out</span>
+        </a>
+    </nav>
+    <h5 style="text-align: center;">Diagnostics Page</h5>
+    <p class="content-padded">  </p>
+    <div class="card" style="margin-bottom: 10% ;padding: 5px;">
+        <ul class="table-view" >
+            <li class="table-view-cell ">
+
+                <img class="media-object pull-left" src="img/transformer.jpg" width="120">
+                <div class="media-body">
+                    <h6>Name: IVTR 1023INT</h6>
+                    <small>Serial No: ivtr2001001</small>
+                    <br/>
+                    <small>Location: Farwaniya</small>
+                    <br/>
+                    <small>Alarm Set: Doble-Warning Level</small>
+                    <br/>
+                    <small>Substaion: JAHR1</small>
+                    <br/>
+                </div>
+
+
+
+
+
+
+
+            </li>
+
+        </ul>
+        <div class="segmented-control">
+            <a class="control-item   btn-primary " style="color: #ffffff">All Samples</a>
+            <a class="control-item btn-positive" style="color: #ffffff">View In Map</a>
+            <a class="control-item btn-negative" style="color: #ffffff">Edit Asset</a>
+        </div>
+        <table>
+
+        </table>
+        <h5 style="text-align: center;">Other Details</h5>
+        <div style="text-align: center;">
+        <table class="table">
+            <thead>
+            <tr>
+                <th style="text-align: center">Parameters</th>
+                <th style="text-align: center">Values</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Oil Volume</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Oil Type</td>
+                <td>Mineral Oil (ASTM3612)</td>
+            </tr>
+            <tr>
+                <td>Oil Preservation</td>
+                <td>Breathing</td>
+            </tr>
+            <tr>
+                <td>KV</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>MVA</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Paper Type</td>
+                <td>Kraft Paper</td>
+            </tr>
+            <tr>
+                <td>Paper Quantity</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Manufacturer</td>
+                <td>Siemens</td>
+            </tr>
+            <tr>
+                <td>Year Of Manufacture	</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    // Lets add the authentication check and the prefilter shizz...
+    //    checkAuth();
+    //    prefilter();
+    //
+    //    $('#log_out').click(function(){
+    //        localStorage.clear();
+    //        window.location.href = "login.html";
+    //    });
+
+
+</script>
+
+</body>
+</html>

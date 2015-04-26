@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css"/>
+
+
+    <!-- Include the compiled Ratchet JS -->
+
+    <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/jquery.js"></script>
+    <script src="js/ratchet.js"></script>
+    <script src="js/check_token.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <style>
+
+        legend {
+            padding: 0;
+            border: 0;
+        }
+        legend {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+
+            line-height: inherit;
+            color: #333;
+            border: 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        table .table-striped  tbody  tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            padding: 0;
+        }
+        .table {
+            border-collapse: collapse !important;
+        }
+        .table td,
+        .table th {
+            background-color: #fff !important;
+        }
+
+        table {
+            background-color: transparent;
+        }
+        caption {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: #777;
+            text-align: left;
+        }
+        th {
+            text-align: left;
+        }
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .table > thead > tr > th,
+        .table > tbody > tr > th,
+        .table > tfoot > tr > th,
+        .table > thead > tr > td,
+        .table > tbody > tr > td,
+        .table > tfoot > tr > td {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid #ddd;
+        }
+        .table > thead > tr > th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #ddd;
+        }
+        .table > caption + thead > tr:first-child > th,
+        .table > colgroup + thead > tr:first-child > th,
+        .table > thead:first-child > tr:first-child > th,
+        .table > caption + thead > tr:first-child > td,
+        .table > colgroup + thead > tr:first-child > td,
+        .table > thead:first-child > tr:first-child > td {
+            border-top: 0;
+        }
+        .table > tbody + tbody {
+            border-top: 2px solid #ddd;
+        }
+        .table .table {
+            background-color: #fff;
+        }
+
+
+        .table > thead > tr > td.active,
+        .table > tbody > tr > td.active,
+        .table > tfoot > tr > td.active,
+        .table > thead > tr > th.active,
+        .table > tbody > tr > th.active,
+        .table > tfoot > tr > th.active,
+        .table > thead > tr.active > td,
+        .table > tbody > tr.active > td,
+        .table > tfoot > tr.active > td,
+        .table > thead > tr.active > th,
+        .table > tbody > tr.active > th,
+        .table > tfoot > tr.active > th {
+            background-color: #f5f5f5;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!-- Make sure all your bars are the first things in your <body> -->
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-compose pull-right"></a>
+    <h1 class="title">Trafix</h1>
+</header>
+<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+<div class="content">
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">Home</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-person"></span>
+            <span class="tab-label">Profile</span>
+        </a>
+        <a class="tab-item" href="#" id="log_out">
+            <span class="icon icon-gear"></span>
+            <span class="tab-label">Log Out</span>
+        </a>
+    </nav>
+    <h5 style="text-align: center;">Rogers Ratio</h5>
+
+    <p class="content-padded" style="text-align: center;"> Sample Number: 213 </p>
+    <div class="card" style="margin-bottom: 10%; text-align: center;">
+        <table class="table">
+            <tr>
+                <th style="text-align: center;">Gas </th>
+                <th style="text-align: center;">Value</th>
+            </tr>
+            <tr>
+                <td>CH4/H2</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>C2H6/CH4</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>C2H4/C2H6</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>C2H2/C2H4</td>
+                <td>53</td>
+            </tr>
+            <tr>
+                <td>CO/CO2</td>
+                <td>234</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+
+    // Lets add the authentication check and the prefilter shizz...
+    //    checkAuth();
+    //    prefilter();
+    //
+    //    $('#log_out').click(function(){
+    //        localStorage.clear();
+    //        window.location.href = "login.html";
+    //    });
+
+
+</script>
+
+</body>
+</html>
