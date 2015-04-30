@@ -23,6 +23,9 @@
     <script src="js/ratchet.js"></script>
     <script src="js/check_token.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="js/cusom.js"></script>
+    <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
     <style>
 
         legend {
@@ -130,90 +133,90 @@
 <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left"></a>
     <a class="icon icon-compose pull-right"></a>
-    <h1 class="title">Trafix</h1>
+    <h1 class="title res">Trafix</h1>
 </header>
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
     <nav class="bar bar-tab">
         <a class="tab-item active" href="#">
             <span class="icon icon-home"></span>
-            <span class="tab-label">Home</span>
+            <span class="tab-label res">Home</span>
         </a>
         <a class="tab-item" href="#">
             <span class="icon icon-person"></span>
-            <span class="tab-label">Profile</span>
+            <span class="tab-label res">Profile</span>
         </a>
         <a class="tab-item" href="#" id="log_out">
             <span class="icon icon-gear"></span>
-            <span class="tab-label">Log Out</span>
+            <span class="tab-label res">Log Out</span>
         </a>
     </nav>
-    <h5 style="text-align: center;">Diagnostics Page</h5>
+    <h5 class="res" style="text-align: center;">Diagnostics Page</h5>
     <p class="content-padded">  </p>
    <div class="card" style="margin-bottom: 13%">
        <ul class="table-view" style="text-align: center">
            <li class="table-view-cell ">
 
-                   <img class="media-object pull-left" src="img/health.jpg" width="150">
+                   <img class="media-object pull-left" src="img/health.jpg" width="40%">
                    <div class="media-body">
-                       <h5> IVTR 1023INT</h5>
-                       <small>Serial No: ivtr2001001</small>
+                       <h5 class="res"> IVTR 1023INT</h5>
+                       <small class="res">Serial No: ivtr2001001</small>
                        <br/>
-                       <small>Last DGA: 31.02.1992</small>
+                       <small class="res">Last DGA: 31.02.1992</small>
                        <br/>
-                       <small>Next DGA: 31.07.2005</small>
+                       <small class="res">Next DGA: 31.07.2005</small>
                        <br/>
-                       <small>Nuber Of Samples: 21</small>
+                       <small class="res">Nuber Of Samples: 21</small>
                        <br/>
                    </div>
 
              <table class=" table table-striped " >
                  <thead>
                  <tr>
-                     <th>Parameters</th>
-                     <th>Values</th>
+                     <th class="res">Parameters</th>
+                     <th class="res">Values</th>
                  </tr>
                  </thead>
                  <tbody>
                  <tr>
-                     <td style="text-align: center"><small>Date <br/>(Last- Second Last Sample)</small></td>
-                     <td><small>2015-04-05 - 2015-04-04</small></td>
+                     <td class="res" style="text-align: center"><small class="res">Date <br/>(Last- Second Last Sample)</small></td>
+                     <td><small class="res">2015-04-05 - 2015-04-04</small></td>
                  </tr>
                  <tr>
-                     <td>H2</td>
-                     <td>10</td>
+                     <td class="res">H2</td>
+                     <td class="res">10</td>
                  </tr>
                  <tr>
-                     <td>CH4</td>
-                     <td>22</td>
+                     <td class="res">CH4</td>
+                     <td class="res">22</td>
                  </tr>
                  <tr>
-                     <td>C2H6</td>
-                     <td>32</td>
+                     <td class="res">C2H6</td>
+                     <td class="res">32</td>
                  </tr>
                  <tr>
-                     <td>C2H4</td>
-                     <td>32</td>
+                     <td class="res">C2H4</td>
+                     <td class="res">32</td>
                  </tr>
                  <tr>
-                     <td>C2H2</td>
-                     <td>54</td>
+                     <td class="res">C2H2</td>
+                     <td class="res">54</td>
                  </tr>
                  <tr>
-                     <td>O2</td>
-                     <td>435</td>
+                     <td class="res">O2</td>
+                     <td class="res">435</td>
                  </tr>
                  <tr>
-                     <td>N2</td>
-                     <td>53</td>
+                     <td class="res">N2</td>
+                     <td class="res">53</td>
                  </tr>
                  <tr>
-                     <td>CO2</td>
-                     <td>53</td>
+                     <td class="res">CO2</td>
+                     <td class="res">53</td>
                  </tr>
                  <tr>
-                     <td>CO</td>
-                     <td>53</td>
+                     <td class="res">CO</td>
+                     <td class="res">53</td>
                  </tr>
                  </tbody>
              </table>

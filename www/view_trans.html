@@ -24,6 +24,9 @@
     <script src="js/ratchet.js"></script>
     <script src="js/check_token.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="js/cusom.js"></script>
+    <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
     <style>
 
 
@@ -113,105 +116,98 @@
 <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left"></a>
     <a class="icon icon-compose pull-right"></a>
-    <h1 class="title">Trafix</h1>
+    <h1 class="title res">Trafix</h1>
 </header>
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
     <nav class="bar bar-tab">
         <a class="tab-item " href="#">
             <span class="icon icon-home"></span>
-            <span class="tab-label">Home</span>
+            <span class="tab-label res">Home</span>
         </a>
         <a class="tab-item" href="#">
             <span class="icon icon-person"></span>
-            <span class="tab-label">Profile</span>
+            <span class="tab-label res">Profile</span>
         </a>
         <a class="tab-item" href="#" id="log_out">
             <span class="icon icon-gear"></span>
-            <span class="tab-label">Log Out</span>
+            <span class="tab-label res">Log Out</span>
         </a>
     </nav>
-    <h5 style="text-align: center;">Diagnostics Page</h5>
+    <h5 class="res" style="text-align: center;" >Diagnostics Page</h5>
     <p class="content-padded">  </p>
     <div class="card" style="margin-bottom: 10% ;padding: 5px;">
         <ul class="table-view" >
             <li class="table-view-cell ">
 
-                <img class="media-object pull-left" src="img/transformer.jpg" width="120">
+                <img class="media-object pull-left" src="img/transformer.jpg" width="40%">
                 <div class="media-body">
-                    <h6>Name: IVTR 1023INT</h6>
-                    <small>Serial No: ivtr2001001</small>
+                    <h6 class="res">Name: IVTR 1023INT</h6>
+                    <small class="res">Serial No: ivtr2001001</small>
                     <br/>
-                    <small>Location: Farwaniya</small>
+                    <small class="res">Location: Farwaniya</small>
                     <br/>
-                    <small>Alarm Set: Doble-Warning Level</small>
+                    <small class="res">Alarm Set: Doble-Warning Level</small>
                     <br/>
-                    <small>Substaion: JAHR1</small>
+                    <small class="res">Substaion: JAHR1</small>
                     <br/>
                 </div>
-
-
-
-
-
-
-
             </li>
 
         </ul>
         <div class="segmented-control">
-            <a class="control-item   btn-primary " style="color: #ffffff">All Samples</a>
-            <a class="control-item btn-positive" style="color: #ffffff">View In Map</a>
-            <a class="control-item btn-negative" style="color: #ffffff">Edit Asset</a>
+            <a class="control-item   btn-primary res" style="color: #ffffff"><small>All Samples</small></a>
+            <a class="control-item btn-positive res" style="color: #ffffff"><small>View In Map</small></a>
+            <a class="control-item btn-negative res" style="color: #ffffff"><small>Edit Asset</small></a>
         </div>
         <table>
 
         </table>
-        <h5 style="text-align: center;">Other Details</h5>
+        <h5 class="res" style="text-align: center;">Other Details</h5>
         <div style="text-align: center;">
         <table class="table">
             <thead>
             <tr>
-                <th style="text-align: center">Parameters</th>
-                <th style="text-align: center">Values</th>
+                <th class="res"  style="text-align: center">Parameters</th>
+                <th class="res"  style="text-align: center">Values</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>Oil Volume</td>
-                <td>1000</td>
+                <td class="res" >Oil Volume</td>
+                <td class="res" >1000</td>
             </tr>
             <tr>
-                <td>Oil Type</td>
-                <td>Mineral Oil (ASTM3612)</td>
+                <td class="res" >Oil Type</td>
+                <td class="res" >Mineral Oil (ASTM3612)</td>
             </tr>
             <tr>
-                <td>Oil Preservation</td>
-                <td>Breathing</td>
+                <td class="res" >Oil Preservation</td>
+                <td class="res" >Breathing</td>
             </tr>
             <tr>
-                <td>KV</td>
-                <td>11</td>
+                <td class="res" >KV</td>
+                <td class="res" >11</td>
             </tr>
             <tr>
-                <td>MVA</td>
-                <td>23</td>
+                <td class="res" >MVA</td>
+                <td class="res" >23</td>
             </tr>
             <tr>
-                <td>Paper Type</td>
-                <td>Kraft Paper</td>
+                <td class="res" >Paper Type</td>
+                <td class="res" >Kraft Paper</td>
             </tr>
             <tr>
-                <td>Paper Quantity</td>
-                <td>0</td>
+                <td class="res" >Paper Quantity</td>
+                <td class="res" >0</td>
             </tr>
             <tr>
-                <td>Manufacturer</td>
-                <td>Siemens</td>
+                <td class="res" >Manufacturer</td>
+                <td class="res" >Siemens</td>
             </tr>
             <tr>
-                <td>Year Of Manufacture	</td>
-                <td>2012</td>
+                <td class="res" >Year Of Manufacture	</td>
+                <td class="res" >2012</td>
             </tr>
             <tr>
                 <td></td>
@@ -224,19 +220,7 @@
 </div>
 
 
-<script>
 
-    // Lets add the authentication check and the prefilter shizz...
-    //    checkAuth();
-    //    prefilter();
-    //
-    //    $('#log_out').click(function(){
-    //        localStorage.clear();
-    //        window.location.href = "login.html";
-    //    });
-
-
-</script>
 
 </body>
 </html>

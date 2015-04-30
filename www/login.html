@@ -21,6 +21,8 @@
     <script src="js/ratchet.js"></script>
     <script src="js/spin.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="js/cusom.js"></script>
 
     <style>
 
@@ -49,7 +51,7 @@
     <div class="content-padded">
 
        <div style="margin-top: 120px;">
-           <img src="img/login_logo.png" alt="Trafix Logo" style="max-width: 100%; height: auto;"/>
+           <img src="img/login_logo.png" alt="Trafix Logo" style="max-width: 100%; height: auto; margin-bottom: 10px"/>
            <div id="alert-box" style="display: none">
                <p id="alert-value" style="text-align: center; padding: 10px; border: 2px solid #ffffff"></p>
            </div>
@@ -59,9 +61,9 @@
            <form>
                <input type="text" name="email" placeholder="Username/Email">
                <input type="password" name="password" placeholder="Password">
-               <button class="btn btn-positive btn-outlined btn-block" id="login_button">Login</button>
+               <button class="btn btn-positive btn-outlined btn-block res" id="login_button">Login</button>
            </form>
-           <p style="text-align: center; font-size: 11px; margin-top: 30px;"><a href="#myModalexample" style="color: #dddddd">About Trafix</a></p>
+           <p style="text-align: center; font-size: 11px; margin-top: 30px;"><a href="#myModalexample" class="res" style="color: #dddddd">About Trafix</a></p>
            <div id="spinner"></div>
 
        </div>
@@ -73,11 +75,11 @@
 <div id="myModalexample" class="modal">
     <header class="bar bar-nav">
         <a class="icon icon-close pull-right" href="#myModalexample"></a>
-        <h1 class="title">About Trafix</h1>
+        <h1 class="title res">About Trafix</h1>
     </header>
 
     <div class="content">
-        <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        <p class="content-padded res">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
     </div>
 </div>
 
