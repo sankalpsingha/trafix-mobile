@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Ratchet template page</title>
+    <title>Trafix Mobile App</title>
 
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -11,16 +11,22 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+
+
     <!-- Include the compiled Ratchet CSS -->
     <link href="css/ratchet.css" rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css"/>
 
     <!-- Include the compiled Ratchet JS -->
+
+    <script src="js/environment.js"></script>
     <script src="js/jquery.js"></script>
 
     <script src="js/ratchet.js"></script>
     <script src="js/spin.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="js/cusom.js"></script>
 
     <style>
 
@@ -49,7 +55,7 @@
     <div class="content-padded">
 
        <div style="margin-top: 120px;">
-           <img src="img/login_logo.png" alt="Trafix Logo" style="max-width: 100%; height: auto;"/>
+           <img src="img/login_logo.png" alt="Trafix Logo" style="max-width: 100%; height: auto; margin-bottom: 10px"/>
            <div id="alert-box" style="display: none">
                <p id="alert-value" style="text-align: center; padding: 10px; border: 2px solid #ffffff"></p>
            </div>
@@ -59,9 +65,9 @@
            <form>
                <input type="text" name="email" placeholder="Username/Email">
                <input type="password" name="password" placeholder="Password">
-               <button class="btn btn-positive btn-outlined btn-block" id="login_button">Login</button>
+               <button class="btn btn-positive btn-outlined btn-block res" id="login_button">Login</button>
            </form>
-           <p style="text-align: center; font-size: 11px; margin-top: 30px;"><a href="#myModalexample" style="color: #dddddd">About Trafix</a></p>
+           <p style="text-align: center; font-size: 11px; margin-top: 30px;"><a href="#myModalexample" class="res" style="color: #dddddd">About Trafix</a></p>
            <div id="spinner"></div>
 
        </div>
@@ -73,11 +79,11 @@
 <div id="myModalexample" class="modal">
     <header class="bar bar-nav">
         <a class="icon icon-close pull-right" href="#myModalexample"></a>
-        <h1 class="title">About Trafix</h1>
+        <h1 class="title res">About Trafix</h1>
     </header>
 
     <div class="content">
-        <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        <p class="content-padded res">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
     </div>
 </div>
 
@@ -108,19 +114,12 @@
             };
              target = document.getElementById('spinner');
 
-
-
-
-
 //            $('#spinner').ajaxStart(function () {
 //                new Spinner(opts).spin(target);
 //
 //            }).ajaxStop(function () {
 //                        $(this).hide();
 //                    });
-
-
-
 
 
             if(localStorage.getItem("auth_token") != null){
@@ -134,7 +133,7 @@
             $.ajax({
                 type : 'POST',
                 dataType : 'json',
-                url : 'http://localhost:3000/session',
+                url : loginUrl,
                 beforeSend: function(){
                      spinner = new Spinner(opts).spin(target);
                 },
@@ -146,7 +145,7 @@
                 }
             }).success(function (data){
                 spinner.stop();
-                console.log(JSON.stringify(data)); // Make sure that you remove this after the development is over.
+//                console.log(JSON.stringify(data)); // Make sure that you remove this after the development is over.
                 //   Lets add the authentication tokens to the local storage.
 
                 localStorage.setItem('auth_token', data.authentication_token);

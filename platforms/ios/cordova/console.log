@@ -894,3 +894,278 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-04-24 01:05:53.806 TrafixMobile[9078:766699] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/A4F9C2C7-EA81-4D7F-8E6B-D0F99B9CF19E/TrafixMobile.app/www/login.html
 2015-04-24 01:06:01.185 TrafixMobile[9078:766699] Resetting plugins due to page load.
 2015-04-24 01:06:01.199 TrafixMobile[9078:766699] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/A4F9C2C7-EA81-4D7F-8E6B-D0F99B9CF19E/TrafixMobile.app/www/homepage.html
+2015-04-24 12:36:25.151 TrafixMobile[9078:766699] Resetting plugins due to page load.
+2015-04-24 12:36:25.277 TrafixMobile[9078:766699] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/A4F9C2C7-EA81-4D7F-8E6B-D0F99B9CF19E/TrafixMobile.app/www/login.html
+2015-04-24 13:10:06.406 TrafixMobile[9987:863686] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-24 13:10:06.408 TrafixMobile[9987:863686] Multi-tasking -> Device: YES, App: YES
+2015-04-24 13:10:06.417 TrafixMobile[9987:863686] Unlimited access to network resources
+2015-04-24 13:10:06.420 TrafixMobile[9987:863686] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-24 13:10:06.524 TrafixMobile[9987:863686] [CDVTimer][statusbar] 19.439995ms
+2015-04-24 13:10:06.524 TrafixMobile[9987:863686] [CDVTimer][TotalPluginStartup] 19.617021ms
+2015-04-24 13:10:06.675 TrafixMobile[9987:863686] Resetting plugins due to page load.
+2015-04-24 13:10:06.805 TrafixMobile[9987:863686] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/76CC4107-3C8E-44CA-9EED-62693DDD67E1/TrafixMobile.app/www/index.html
+2015-04-24 13:10:06.886 TrafixMobile[9987:863686] Resetting plugins due to page load.
+2015-04-24 13:10:06.963 TrafixMobile[9987:863686] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/76CC4107-3C8E-44CA-9EED-62693DDD67E1/TrafixMobile.app/www/login.html
+2015-04-24 13:10:22.537 TrafixMobile[9987:863686] Resetting plugins due to page load.
+2015-04-24 13:10:22.558 TrafixMobile[9987:863686] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/76CC4107-3C8E-44CA-9EED-62693DDD67E1/TrafixMobile.app/www/homepage.html
+2015-05-01 03:25:10.724 TrafixMobile[3087:218120] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 03:25:10.726 TrafixMobile[3087:218120] Multi-tasking -> Device: YES, App: YES
+2015-05-01 03:25:10.742 TrafixMobile[3087:218120] Unlimited access to network resources
+2015-05-01 03:25:10.750 TrafixMobile[3087:218120] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 03:25:11.161 TrafixMobile[3087:218120] [CDVTimer][statusbar] 129.956961ms
+2015-05-01 03:25:11.161 TrafixMobile[3087:218120] [CDVTimer][TotalPluginStartup] 130.106032ms
+2015-05-01 03:25:11.302 TrafixMobile[3087:218120] Resetting plugins due to page load.
+2015-05-01 03:25:11.435 TrafixMobile[3087:218120] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/E28DAC6B-7CE2-4C0D-8C79-F16988888287/TrafixMobile.app/www/index.html
+2015-05-01 03:25:11.484 TrafixMobile[3087:218120] Resetting plugins due to page load.
+2015-05-01 03:25:11.569 TrafixMobile[3087:218120] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/E28DAC6B-7CE2-4C0D-8C79-F16988888287/TrafixMobile.app/www/homepage.html
+2015-05-01 03:25:21.926 TrafixMobile[3087:218120] CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:25:21.926 TrafixMobile[3087:218120] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:25:22.618 TrafixMobile[3087:218120] CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:25:22.618 TrafixMobile[3087:218120] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:25:57.564 TrafixMobile[3087:218120] CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:25:57.564 TrafixMobile[3087:218120] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:25:58.182 TrafixMobile[3087:218120] CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:25:58.182 TrafixMobile[3087:218120] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:26:46.739 TrafixMobile[3256:220122] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 03:26:46.739 TrafixMobile[3256:220122] Multi-tasking -> Device: YES, App: YES
+2015-05-01 03:26:46.741 TrafixMobile[3256:220122] Unlimited access to network resources
+2015-05-01 03:26:46.743 TrafixMobile[3256:220122] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 03:26:46.824 TrafixMobile[3256:220122] [CDVTimer][statusbar] 12.070954ms
+2015-05-01 03:26:46.824 TrafixMobile[3256:220122] [CDVTimer][TotalPluginStartup] 12.199998ms
+2015-05-01 03:26:46.887 TrafixMobile[3256:220122] Resetting plugins due to page load.
+2015-05-01 03:26:46.942 TrafixMobile[3256:220122] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/914D256E-D675-4B9A-9378-3BFE8ABE095D/TrafixMobile.app/www/index.html
+2015-05-01 03:26:46.962 TrafixMobile[3256:220122] Resetting plugins due to page load.
+2015-05-01 03:26:47.014 TrafixMobile[3256:220122] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/914D256E-D675-4B9A-9378-3BFE8ABE095D/TrafixMobile.app/www/homepage.html
+2015-05-01 03:27:02.371 TrafixMobile[3256:220122] Resetting plugins due to page load.
+2015-05-01 03:27:02.457 TrafixMobile[3256:220122] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/914D256E-D675-4B9A-9378-3BFE8ABE095D/TrafixMobile.app/www/login.html
+2015-05-01 03:31:18.347 TrafixMobile[3256:220122] Resetting plugins due to page load.
+2015-05-01 03:31:18.469 TrafixMobile[3256:220122] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/914D256E-D675-4B9A-9378-3BFE8ABE095D/TrafixMobile.app/www/homepage.html
+2015-05-01 03:34:09.854 TrafixMobile[3605:225394] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 03:34:09.855 TrafixMobile[3605:225394] Multi-tasking -> Device: YES, App: YES
+2015-05-01 03:34:09.857 TrafixMobile[3605:225394] Unlimited access to network resources
+2015-05-01 03:34:09.861 TrafixMobile[3605:225394] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 03:34:09.952 TrafixMobile[3605:225394] [CDVTimer][statusbar] 14.088988ms
+2015-05-01 03:34:09.952 TrafixMobile[3605:225394] [CDVTimer][TotalPluginStartup] 14.231980ms
+2015-05-01 03:34:10.019 TrafixMobile[3605:225394] Resetting plugins due to page load.
+2015-05-01 03:34:10.079 TrafixMobile[3605:225394] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/08062D99-FF91-475D-9DB3-9C7C159DA2A4/TrafixMobile.app/www/index.html
+2015-05-01 03:34:10.104 TrafixMobile[3605:225394] Resetting plugins due to page load.
+2015-05-01 03:34:10.121 TrafixMobile[3605:225394] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/08062D99-FF91-475D-9DB3-9C7C159DA2A4/TrafixMobile.app/www/homepage.html
+2015-05-01 03:46:24.790 TrafixMobile[4052:233248] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 03:46:24.791 TrafixMobile[4052:233248] Multi-tasking -> Device: YES, App: YES
+2015-05-01 03:46:24.793 TrafixMobile[4052:233248] Unlimited access to network resources
+2015-05-01 03:46:24.795 TrafixMobile[4052:233248] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 03:46:24.873 TrafixMobile[4052:233248] [CDVTimer][statusbar] 15.172958ms
+2015-05-01 03:46:24.873 TrafixMobile[4052:233248] [CDVTimer][TotalPluginStartup] 15.375018ms
+2015-05-01 03:46:24.938 TrafixMobile[4052:233248] Resetting plugins due to page load.
+2015-05-01 03:46:24.996 TrafixMobile[4052:233248] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/711704D7-83A4-427B-A3BF-0731CA3BFB0A/TrafixMobile.app/www/index.html
+2015-05-01 03:46:25.020 TrafixMobile[4052:233248] Resetting plugins due to page load.
+2015-05-01 03:46:25.035 TrafixMobile[4052:233248] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/711704D7-83A4-427B-A3BF-0731CA3BFB0A/TrafixMobile.app/www/homepage.html
+2015-05-01 03:47:12.316 TrafixMobile[4052:233248] CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:47:12.316 TrafixMobile[4052:233248] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 03:47:26.868 TrafixMobile[4186:234306] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 03:47:26.869 TrafixMobile[4186:234306] Multi-tasking -> Device: YES, App: YES
+2015-05-01 03:47:26.870 TrafixMobile[4186:234306] Unlimited access to network resources
+2015-05-01 03:47:26.873 TrafixMobile[4186:234306] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 03:47:26.950 TrafixMobile[4186:234306] [CDVTimer][statusbar] 11.871994ms
+2015-05-01 03:47:26.951 TrafixMobile[4186:234306] [CDVTimer][TotalPluginStartup] 11.999011ms
+2015-05-01 03:47:27.019 TrafixMobile[4186:234306] Resetting plugins due to page load.
+2015-05-01 03:47:27.070 TrafixMobile[4186:234306] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/7DB97EE4-16B6-4E3E-8D4E-8941E93A9815/TrafixMobile.app/www/index.html
+2015-05-01 03:47:27.092 TrafixMobile[4186:234306] Resetting plugins due to page load.
+2015-05-01 03:47:27.142 TrafixMobile[4186:234306] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/7DB97EE4-16B6-4E3E-8D4E-8941E93A9815/TrafixMobile.app/www/homepage.html
+2015-05-01 03:47:33.646 TrafixMobile[4186:234306] Resetting plugins due to page load.
+2015-05-01 03:47:33.681 TrafixMobile[4186:234306] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/7DB97EE4-16B6-4E3E-8D4E-8941E93A9815/TrafixMobile.app/www/login.html
+2015-05-01 03:48:03.718 TrafixMobile[4186:234306] Resetting plugins due to page load.
+2015-05-01 03:48:03.792 TrafixMobile[4186:234306] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/7DB97EE4-16B6-4E3E-8D4E-8941E93A9815/TrafixMobile.app/www/homepage.html
+2015-05-01 03:48:48.299 TrafixMobile[4335:235507] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 03:48:48.300 TrafixMobile[4335:235507] Multi-tasking -> Device: YES, App: YES
+2015-05-01 03:48:48.302 TrafixMobile[4335:235507] Unlimited access to network resources
+2015-05-01 03:48:48.304 TrafixMobile[4335:235507] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 03:48:48.399 TrafixMobile[4335:235507] [CDVTimer][statusbar] 14.450014ms
+2015-05-01 03:48:48.399 TrafixMobile[4335:235507] [CDVTimer][TotalPluginStartup] 14.657974ms
+2015-05-01 03:48:48.528 TrafixMobile[4335:235507] Resetting plugins due to page load.
+2015-05-01 03:48:48.588 TrafixMobile[4335:235507] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/EDD9B438-1CDA-4BCE-9A8A-63704586C8BB/TrafixMobile.app/www/index.html
+2015-05-01 03:48:48.611 TrafixMobile[4335:235507] Resetting plugins due to page load.
+2015-05-01 03:48:48.672 TrafixMobile[4335:235507] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/EDD9B438-1CDA-4BCE-9A8A-63704586C8BB/TrafixMobile.app/www/homepage.html
+2015-05-01 03:48:50.346 TrafixMobile[4335:235507] Resetting plugins due to page load.
+2015-05-01 03:48:50.418 TrafixMobile[4335:235507] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/EDD9B438-1CDA-4BCE-9A8A-63704586C8BB/TrafixMobile.app/www/login.html
+2015-05-01 03:49:06.876 TrafixMobile[4335:235507] Resetting plugins due to page load.
+2015-05-01 03:49:06.947 TrafixMobile[4335:235507] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/EDD9B438-1CDA-4BCE-9A8A-63704586C8BB/TrafixMobile.app/www/homepage.html
+2015-05-01 03:57:32.490 TrafixMobile[4708:241699] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 03:57:32.491 TrafixMobile[4708:241699] Multi-tasking -> Device: YES, App: YES
+2015-05-01 03:57:32.492 TrafixMobile[4708:241699] Unlimited access to network resources
+2015-05-01 03:57:32.495 TrafixMobile[4708:241699] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 03:57:32.628 TrafixMobile[4708:241699] [CDVTimer][statusbar] 16.646981ms
+2015-05-01 03:57:32.628 TrafixMobile[4708:241699] [CDVTimer][TotalPluginStartup] 16.794980ms
+2015-05-01 03:57:32.707 TrafixMobile[4708:241699] Resetting plugins due to page load.
+2015-05-01 03:57:32.779 TrafixMobile[4708:241699] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/F227FDC9-5079-4475-8A5C-8EDF166CE185/TrafixMobile.app/www/index.html
+2015-05-01 03:57:32.809 TrafixMobile[4708:241699] Resetting plugins due to page load.
+2015-05-01 03:57:32.835 TrafixMobile[4708:241699] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/F227FDC9-5079-4475-8A5C-8EDF166CE185/TrafixMobile.app/www/homepage.html
+2015-05-01 03:59:29.353 TrafixMobile[4858:243302] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 03:59:29.354 TrafixMobile[4858:243302] Multi-tasking -> Device: YES, App: YES
+2015-05-01 03:59:29.355 TrafixMobile[4858:243302] Unlimited access to network resources
+2015-05-01 03:59:29.357 TrafixMobile[4858:243302] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 03:59:29.430 TrafixMobile[4858:243302] [CDVTimer][statusbar] 11.411011ms
+2015-05-01 03:59:29.431 TrafixMobile[4858:243302] [CDVTimer][TotalPluginStartup] 11.530042ms
+2015-05-01 03:59:29.495 TrafixMobile[4858:243302] Resetting plugins due to page load.
+2015-05-01 03:59:29.546 TrafixMobile[4858:243302] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/2BEC2412-16E8-4C89-83BB-10FA3B8305E7/TrafixMobile.app/www/index.html
+2015-05-01 03:59:29.572 TrafixMobile[4858:243302] Resetting plugins due to page load.
+2015-05-01 03:59:29.589 TrafixMobile[4858:243302] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/2BEC2412-16E8-4C89-83BB-10FA3B8305E7/TrafixMobile.app/www/homepage.html
+2015-05-01 04:00:00.181 TrafixMobile[4858:243302] CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 04:00:00.182 TrafixMobile[4858:243302] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 04:01:14.982 TrafixMobile[5012:244907] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 04:01:14.983 TrafixMobile[5012:244907] Multi-tasking -> Device: YES, App: YES
+2015-05-01 04:01:14.985 TrafixMobile[5012:244907] Unlimited access to network resources
+2015-05-01 04:01:14.987 TrafixMobile[5012:244907] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 04:01:15.066 TrafixMobile[5012:244907] [CDVTimer][statusbar] 12.585998ms
+2015-05-01 04:01:15.066 TrafixMobile[5012:244907] [CDVTimer][TotalPluginStartup] 12.713015ms
+2015-05-01 04:01:15.124 TrafixMobile[5012:244907] Resetting plugins due to page load.
+2015-05-01 04:01:15.177 TrafixMobile[5012:244907] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/F9AF31A4-31C2-45A7-B075-C57B05CCDA01/TrafixMobile.app/www/index.html
+2015-05-01 04:01:15.196 TrafixMobile[5012:244907] Resetting plugins due to page load.
+2015-05-01 04:01:15.214 TrafixMobile[5012:244907] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/F9AF31A4-31C2-45A7-B075-C57B05CCDA01/TrafixMobile.app/www/homepage.html
+2015-05-01 04:02:31.742 TrafixMobile[5146:246267] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 04:02:31.743 TrafixMobile[5146:246267] Multi-tasking -> Device: YES, App: YES
+2015-05-01 04:02:31.744 TrafixMobile[5146:246267] Unlimited access to network resources
+2015-05-01 04:02:31.746 TrafixMobile[5146:246267] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 04:02:31.823 TrafixMobile[5146:246267] [CDVTimer][statusbar] 14.163971ms
+2015-05-01 04:02:31.823 TrafixMobile[5146:246267] [CDVTimer][TotalPluginStartup] 14.307022ms
+2015-05-01 04:02:31.888 TrafixMobile[5146:246267] Resetting plugins due to page load.
+2015-05-01 04:02:31.940 TrafixMobile[5146:246267] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/023CF2CA-C1FC-4329-86E9-76F792B812C9/TrafixMobile.app/www/index.html
+2015-05-01 04:02:31.963 TrafixMobile[5146:246267] Resetting plugins due to page load.
+2015-05-01 04:02:31.980 TrafixMobile[5146:246267] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/023CF2CA-C1FC-4329-86E9-76F792B812C9/TrafixMobile.app/www/homepage.html
+2015-05-01 04:04:06.555 TrafixMobile[5352:247957] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 04:04:06.556 TrafixMobile[5352:247957] Multi-tasking -> Device: YES, App: YES
+2015-05-01 04:04:06.557 TrafixMobile[5352:247957] Unlimited access to network resources
+2015-05-01 04:04:06.559 TrafixMobile[5352:247957] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 04:04:06.637 TrafixMobile[5352:247957] [CDVTimer][statusbar] 13.220966ms
+2015-05-01 04:04:06.637 TrafixMobile[5352:247957] [CDVTimer][TotalPluginStartup] 13.374031ms
+2015-05-01 04:04:06.742 TrafixMobile[5352:247957] Resetting plugins due to page load.
+2015-05-01 04:04:06.800 TrafixMobile[5352:247957] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/E04FA2D8-1DBF-411A-9BA4-941222225E7B/TrafixMobile.app/www/index.html
+2015-05-01 04:04:06.832 TrafixMobile[5352:247957] Resetting plugins due to page load.
+2015-05-01 04:04:06.855 TrafixMobile[5352:247957] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/E04FA2D8-1DBF-411A-9BA4-941222225E7B/TrafixMobile.app/www/homepage.html
+2015-05-01 04:04:20.649 TrafixMobile[5474:248460] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 04:04:20.649 TrafixMobile[5474:248460] Multi-tasking -> Device: YES, App: YES
+2015-05-01 04:04:20.652 TrafixMobile[5474:248460] Unlimited access to network resources
+2015-05-01 04:04:20.654 TrafixMobile[5474:248460] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 04:04:20.754 TrafixMobile[5474:248460] [CDVTimer][statusbar] 13.546050ms
+2015-05-01 04:04:20.754 TrafixMobile[5474:248460] [CDVTimer][TotalPluginStartup] 13.698995ms
+2015-05-01 04:04:20.831 TrafixMobile[5474:248460] Resetting plugins due to page load.
+2015-05-01 04:04:20.896 TrafixMobile[5474:248460] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/F63327EA-429B-4984-98DB-51A1320B79DB/TrafixMobile.app/www/index.html
+2015-05-01 04:04:20.928 TrafixMobile[5474:248460] Resetting plugins due to page load.
+2015-05-01 04:04:20.952 TrafixMobile[5474:248460] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/F63327EA-429B-4984-98DB-51A1320B79DB/TrafixMobile.app/www/homepage.html
+2015-05-01 04:05:02.918 TrafixMobile[5611:249458] Apache Cordova native platform version 3.7.0 is starting.
+2015-05-01 04:05:02.919 TrafixMobile[5611:249458] Multi-tasking -> Device: YES, App: YES
+2015-05-01 04:05:02.920 TrafixMobile[5611:249458] Unlimited access to network resources
+2015-05-01 04:05:02.922 TrafixMobile[5611:249458] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-05-01 04:05:02.994 TrafixMobile[5611:249458] [CDVTimer][statusbar] 12.198031ms
+2015-05-01 04:05:02.994 TrafixMobile[5611:249458] [CDVTimer][TotalPluginStartup] 12.321949ms
+2015-05-01 04:05:03.053 TrafixMobile[5611:249458] Resetting plugins due to page load.
+2015-05-01 04:05:03.107 TrafixMobile[5611:249458] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/0AFE2019-FB7E-4396-A6A0-39ED523301AA/TrafixMobile.app/www/index.html
+2015-05-01 04:05:03.126 TrafixMobile[5611:249458] Resetting plugins due to page load.
+2015-05-01 04:05:03.145 TrafixMobile[5611:249458] Finished load of: file:///Users/sankalpsingha/Library/Developer/CoreSimulator/Devices/CB4F2917-F9C0-4D89-BDB1-52AC5FB05503/data/Containers/Bundle/Application/0AFE2019-FB7E-4396-A6A0-39ED523301AA/TrafixMobile.app/www/homepage.html
+2015-05-01 04:05:10.354 TrafixMobile[5611:249458] CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 04:05:10.354 TrafixMobile[5611:249458] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 04:05:41.283 TrafixMobile[5611:249458] CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 04:05:41.284 TrafixMobile[5611:249458] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-05-01 04:05:41.284 TrafixMobile[5611:249458] Failed to load webpage with error: The URL can’t be shown
+2015-05-01 04:05:42.217 TrafixMobile[5611:249458] Failed to load webpage with error: The URL can’t be shown
+2015-05-01 04:06:12.940 TrafixMobile[5611:249458] Failed to load webpage with error: The URL can’t be shown
+2015-05-01 04:06:13.421 TrafixMobile[5611:249458] Failed to load webpage with error: The URL can’t be shown
+2015-05-01 04:06:14.571 TrafixMobile[5611:249458] Failed to load webpage with error: The URL can’t be shown

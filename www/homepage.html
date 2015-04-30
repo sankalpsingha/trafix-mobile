@@ -18,6 +18,7 @@
     <!-- Include the compiled Ratchet JS -->
 
     <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/environment.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/ratchet.js"></script>
     <script src="js/check_token.js"></script>
@@ -42,7 +43,7 @@
     <header class="bar bar-nav">
         <a class="icon icon-left-nav pull-left"></a>
         <a class="icon icon-compose pull-right"></a>
-        <h1 class="title res">{{title}} Trafix</h1>
+        <h1 class="title res">Trafix</h1>
     </header>
 
 
@@ -62,14 +63,19 @@
         </a>
     </nav>
     <p class="content-padded res"> My Assets </p>
-    <div class="card">
+
+        <div class="card">
         <ul class="table-view">
+
+
+            {{#each asset}}
+
             <li class="table-view-cell media">
                 <a class="navigate-right">
                     <img class="media-object pull-left" src="img/health.jpg" width="100">
                     <div class="media-body">
-                      <h5 class="res"> IVTR 1023INT</h5>
-                        <small class="res">Serial No: ivtr2001001</small>
+                        <h5 class="res"> {{name}}</h5>
+                        <small class="res">Serial No: {{serial_number}}</small>
                         <br/>
                         <small class="res">Last DGA: 31.02.1992</small>
                         <br/>
@@ -88,54 +94,60 @@
                     </a>
                 </div>
             </li>
-            <li class="table-view-cell media">
-                <a class="navigate-right">
-                    <img class="media-object pull-left" src="img/health.jpg" width="100">
-                    <div class="media-body">
-                        <h5 class="res"> IVTR 1023INT</h5>
-                        <small class="res">Serial No: ivtr2001001</small>
-                        <br/>
-                        <small class="res">Last DGA: 31.02.1992</small>
-                        <br/>
-                    </div>
-                    <span class="badge res"> <small class="res" >5 Samples</small></span>
-                </a>
-                <div class="segmented-control" style="margin-top: 20px;">
-                    <a class="control-item active res" href="#item1mobile">
-                        <small class="res"> Add Sample</small>
-                    </a>
-                    <a class="control-item res" href="#item2mobile">
-                        <small class="res"> View Asset </small>
-                    </a>
-                    <a class="control-item res" href="#item3mobile">
-                        <small class="res">View Location</small>
-                    </a>
-                </div>
-            </li>
-            <li class="table-view-cell media">
-                <a class="navigate-right">
-                    <img class="media-object pull-left" src="img/health.jpg" width="100">
-                    <div class="media-body">
-                        <h5 class="res"> IVTR 1023INT</h5>
-                        <small class="res">Serial No: ivtr2001001</small>
-                        <br/>
-                        <small class="res">Last DGA: 31.02.1992</small>
-                        <br/>
-                    </div>
-                    <span class="badge res"> <small class="res" >5 Samples</small></span>
-                </a>
-                <div class="segmented-control" style="margin-top: 20px;">
-                    <a class="control-item active res" href="#item1mobile">
-                        <small class="res"> Add Sample</small>
-                    </a>
-                    <a class="control-item res" href="#item2mobile">
-                        <small class="res"> View Asset </small>
-                    </a>
-                    <a class="control-item res" href="#item3mobile">
-                        <small class="res">View Location</small>
-                    </a>
-                </div>
-            </li>
+
+            {{/each}}
+
+
+            <!--<li class="table-view-cell media">-->
+
+
+                <!--<a class="navigate-right">-->
+                    <!--<img class="media-object pull-left" src="img/health.jpg" width="100">-->
+                    <!--<div class="media-body">-->
+                        <!--<h5 class="res"> IVTR 1023INT</h5>-->
+                        <!--<small class="res">Serial No: ivtr2001001</small>-->
+                        <!--<br/>-->
+                        <!--<small class="res">Last DGA: 31.02.1992</small>-->
+                        <!--<br/>-->
+                    <!--</div>-->
+                    <!--<span class="badge res"> <small class="res" >5 Samples</small></span>-->
+                <!--</a>-->
+                <!--<div class="segmented-control" style="margin-top: 20px;">-->
+                    <!--<a class="control-item active res" href="#item1mobile">-->
+                        <!--<small class="res"> Add Sample</small>-->
+                    <!--</a>-->
+                    <!--<a class="control-item res" href="#item2mobile">-->
+                        <!--<small class="res"> View Asset </small>-->
+                    <!--</a>-->
+                    <!--<a class="control-item res" href="#item3mobile">-->
+                        <!--<small class="res">View Location</small>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="table-view-cell media">-->
+                <!--<a class="navigate-right">-->
+                    <!--<img class="media-object pull-left" src="img/health.jpg" width="100">-->
+                    <!--<div class="media-body">-->
+                        <!--<h5 class="res"> IVTR 1023INT</h5>-->
+                        <!--<small class="res">Serial No: ivtr2001001</small>-->
+                        <!--<br/>-->
+                        <!--<small class="res">Last DGA: 31.02.1992</small>-->
+                        <!--<br/>-->
+                    <!--</div>-->
+                    <!--<span class="badge res"> <small class="res" >5 Samples</small></span>-->
+                <!--</a>-->
+                <!--<div class="segmented-control" style="margin-top: 20px;">-->
+                    <!--<a class="control-item active res" href="#item1mobile">-->
+                        <!--<small class="res"> Add Sample</small>-->
+                    <!--</a>-->
+                    <!--<a class="control-item res" href="#item2mobile">-->
+                        <!--<small class="res"> View Asset </small>-->
+                    <!--</a>-->
+                    <!--<a class="control-item res" href="#item3mobile">-->
+                        <!--<small class="res">View Location</small>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</li>-->
         </ul>
     </div>
 </div>
@@ -144,23 +156,47 @@
 <script>
 
 
-    checkAuth();
-    prefilter();
 
-    var content   = $("#content").html();
-    var hello = {title: ''};
-    var template = Handlebars.compile(content);
-    $('#placeholder').html(template(hello));
 
-    $('document').ready(function(){
-        $.ajax(
-                {
-                    url:'www.trafixsoft.com',
-                    type: 'post'
-                }
-        )
 
-    });
+        checkAuth();
+        prefilter();
+
+
+        $('document').ready(function(){
+//            Lets send the ajax!! Plane flying over neeraj!! :)
+            $.ajax({
+                type: 'get',
+                url: apiUrl + '/assets'
+
+            }).success(function(data){
+                console.log(JSON.stringify(data));
+
+                // Lets add the handlebars shizz...
+                var content   = $("#content").html();
+                var template = Handlebars.compile(content);
+                $('#placeholder').html(template(data));
+
+
+            }).error(function(){
+                alert('Some error occurred.');
+            });
+
+
+
+            $('#log_out').click(function(){
+                localStorage.clear();
+                window.location.href = "login.html";
+            });
+
+        });
+
+
+
+
+
+
+
 
 </script>
 

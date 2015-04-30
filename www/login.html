@@ -11,11 +11,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+
+
     <!-- Include the compiled Ratchet CSS -->
     <link href="css/ratchet.css" rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css"/>
 
     <!-- Include the compiled Ratchet JS -->
+
+    <script src="js/environment.js"></script>
     <script src="js/jquery.js"></script>
 
     <script src="js/ratchet.js"></script>
@@ -129,7 +133,7 @@
             $.ajax({
                 type : 'POST',
                 dataType : 'json',
-                url : 'http://localhost:3000/session',
+                url : loginUrl,
                 beforeSend: function(){
                      spinner = new Spinner(opts).spin(target);
                 },

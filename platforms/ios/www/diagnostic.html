@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css"/>
+
+
+    <!-- Include the compiled Ratchet JS -->
+
+    <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/jquery.js"></script>
+    <script src="js/ratchet.js"></script>
+    <script src="js/check_token.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="js/cusom.js"></script>
+    <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
+    <style>
+
+        legend {
+            padding: 0;
+            border: 0;
+        }
+        legend {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+
+            line-height: inherit;
+            color: #333;
+            border: 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            padding: 0;
+        }
+        .table {
+            border-collapse: collapse !important;
+        }
+        .table td,
+        .table th {
+            background-color: #fff !important;
+        }
+
+        table {
+            background-color: transparent;
+        }
+        caption {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: #777;
+            text-align: left;
+        }
+        th {
+            text-align: left;
+        }
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .table > thead > tr > th,
+        .table > tbody > tr > th,
+        .table > tfoot > tr > th,
+        .table > thead > tr > td,
+        .table > tbody > tr > td,
+        .table > tfoot > tr > td {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid #ddd;
+        }
+        .table > thead > tr > th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #ddd;
+        }
+        .table > caption + thead > tr:first-child > th,
+        .table > colgroup + thead > tr:first-child > th,
+        .table > thead:first-child > tr:first-child > th,
+        .table > caption + thead > tr:first-child > td,
+        .table > colgroup + thead > tr:first-child > td,
+        .table > thead:first-child > tr:first-child > td {
+            border-top: 0;
+        }
+        .table > tbody + tbody {
+            border-top: 2px solid #ddd;
+        }
+        .table .table {
+            background-color: #fff;
+        }
+
+
+        .table > thead > tr > td.active,
+        .table > tbody > tr > td.active,
+        .table > tfoot > tr > td.active,
+        .table > thead > tr > th.active,
+        .table > tbody > tr > th.active,
+        .table > tfoot > tr > th.active,
+        .table > thead > tr.active > td,
+        .table > tbody > tr.active > td,
+        .table > tfoot > tr.active > td,
+        .table > thead > tr.active > th,
+        .table > tbody > tr.active > th,
+        .table > tfoot > tr.active > th {
+            background-color: #f5f5f5;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!-- Make sure all your bars are the first things in your <body> -->
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-compose pull-right"></a>
+    <h1 class="title res">Trafix</h1>
+</header>
+<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+<div class="content">
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label res">Home</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-person"></span>
+            <span class="tab-label res">Profile</span>
+        </a>
+        <a class="tab-item" href="#" id="log_out">
+            <span class="icon icon-gear"></span>
+            <span class="tab-label res">Log Out</span>
+        </a>
+    </nav>
+    <h5 class="res" style="text-align: center;">Diagnostics Page</h5>
+    <p class="content-padded">  </p>
+   <div class="card" style="margin-bottom: 13%">
+       <ul class="table-view" style="text-align: center">
+           <li class="table-view-cell ">
+
+                   <img class="media-object pull-left" src="img/health.jpg" width="40%">
+                   <div class="media-body">
+                       <h5 class="res"> IVTR 1023INT</h5>
+                       <small class="res">Serial No: ivtr2001001</small>
+                       <br/>
+                       <small class="res">Last DGA: 31.02.1992</small>
+                       <br/>
+                       <small class="res">Next DGA: 31.07.2005</small>
+                       <br/>
+                       <small class="res">Nuber Of Samples: 21</small>
+                       <br/>
+                   </div>
+
+             <table class=" table table-striped " >
+                 <thead>
+                 <tr>
+                     <th class="res">Parameters</th>
+                     <th class="res">Values</th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <tr>
+                     <td class="res" style="text-align: center"><small class="res">Date <br/>(Last- Second Last Sample)</small></td>
+                     <td><small class="res">2015-04-05 - 2015-04-04</small></td>
+                 </tr>
+                 <tr>
+                     <td class="res">H2</td>
+                     <td class="res">10</td>
+                 </tr>
+                 <tr>
+                     <td class="res">CH4</td>
+                     <td class="res">22</td>
+                 </tr>
+                 <tr>
+                     <td class="res">C2H6</td>
+                     <td class="res">32</td>
+                 </tr>
+                 <tr>
+                     <td class="res">C2H4</td>
+                     <td class="res">32</td>
+                 </tr>
+                 <tr>
+                     <td class="res">C2H2</td>
+                     <td class="res">54</td>
+                 </tr>
+                 <tr>
+                     <td class="res">O2</td>
+                     <td class="res">435</td>
+                 </tr>
+                 <tr>
+                     <td class="res">N2</td>
+                     <td class="res">53</td>
+                 </tr>
+                 <tr>
+                     <td class="res">CO2</td>
+                     <td class="res">53</td>
+                 </tr>
+                 <tr>
+                     <td class="res">CO</td>
+                     <td class="res">53</td>
+                 </tr>
+                 </tbody>
+             </table>
+
+
+
+
+
+               <table class="table">
+                   <thead>
+                   <tr>
+                       <th>Parameters</th>
+                       <th>Values</th></tr>
+                   </thead>
+                   <tbody>
+                   <tr>
+                       <td>Last Sample date</td>
+                       <td>11.11.4331</td>
+                   </tr>
+                   <tr>
+                       <td>TDCG</td>
+                       <td>296</td>
+                   </tr>
+
+                   </tbody>
+               </table>
+
+               <h6>IEEE recommendation</h6>
+               <small><span style="font-weight: 300">TDCG action based condition : Condition 1</span>
+                   <br/>
+
+                   Continue Normal Operations (OPA). The transformer is working normally.</small>
+
+           </li>
+       </ul>
+   </div>
+</div>
+
+
+<script>
+
+    // Lets add the authentication check and the prefilter shizz...
+    //    checkAuth();
+    //    prefilter();
+    //
+    //    $('#log_out').click(function(){
+    //        localStorage.clear();
+    //        window.location.href = "login.html";
+    //    });
+
+
+</script>
+
+</body>
+</html>
