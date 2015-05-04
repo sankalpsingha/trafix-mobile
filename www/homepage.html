@@ -36,32 +36,34 @@
 
 <div id="placeholder"></div>
 
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-compose pull-right"></a>
+    <h1 class="title res">Trafix</h1>
+</header>
+
+<nav class="bar bar-tab">
+    <a class="tab-item active" href="#">
+        <span class="icon icon-home"></span>
+        <span class="tab-label res">Home</span>
+    </a>
+    <a class="tab-item" href="#">
+        <span class="icon icon-person"></span>
+        <span class="tab-label res">Profile</span>
+    </a>
+    <a class="tab-item" href="#" id="log_out">
+        <span class="icon icon-gear"></span>
+        <span class="tab-label res">Log Out</span>
+    </a>
+</nav>
+
 
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <script id="content" type="text/x-handlebars-template">
 
-    <header class="bar bar-nav">
-        <a class="icon icon-left-nav pull-left"></a>
-        <a class="icon icon-compose pull-right"></a>
-        <h1 class="title res">Trafix</h1>
-    </header>
 
 
     <div class="content">
-    <nav class="bar bar-tab">
-        <a class="tab-item active" href="#">
-            <span class="icon icon-home"></span>
-            <span class="tab-label res">Home</span>
-        </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-person"></span>
-            <span class="tab-label res">Profile</span>
-        </a>
-        <a class="tab-item" href="#" id="log_out">
-            <span class="icon icon-gear"></span>
-            <span class="tab-label res">Log Out</span>
-        </a>
-    </nav>
     <p class="content-padded res"> My Assets </p>
 
         <div class="card">
@@ -97,57 +99,6 @@
 
             {{/each}}
 
-
-            <!--<li class="table-view-cell media">-->
-
-
-                <!--<a class="navigate-right">-->
-                    <!--<img class="media-object pull-left" src="img/health.jpg" width="100">-->
-                    <!--<div class="media-body">-->
-                        <!--<h5 class="res"> IVTR 1023INT</h5>-->
-                        <!--<small class="res">Serial No: ivtr2001001</small>-->
-                        <!--<br/>-->
-                        <!--<small class="res">Last DGA: 31.02.1992</small>-->
-                        <!--<br/>-->
-                    <!--</div>-->
-                    <!--<span class="badge res"> <small class="res" >5 Samples</small></span>-->
-                <!--</a>-->
-                <!--<div class="segmented-control" style="margin-top: 20px;">-->
-                    <!--<a class="control-item active res" href="#item1mobile">-->
-                        <!--<small class="res"> Add Sample</small>-->
-                    <!--</a>-->
-                    <!--<a class="control-item res" href="#item2mobile">-->
-                        <!--<small class="res"> View Asset </small>-->
-                    <!--</a>-->
-                    <!--<a class="control-item res" href="#item3mobile">-->
-                        <!--<small class="res">View Location</small>-->
-                    <!--</a>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="table-view-cell media">-->
-                <!--<a class="navigate-right">-->
-                    <!--<img class="media-object pull-left" src="img/health.jpg" width="100">-->
-                    <!--<div class="media-body">-->
-                        <!--<h5 class="res"> IVTR 1023INT</h5>-->
-                        <!--<small class="res">Serial No: ivtr2001001</small>-->
-                        <!--<br/>-->
-                        <!--<small class="res">Last DGA: 31.02.1992</small>-->
-                        <!--<br/>-->
-                    <!--</div>-->
-                    <!--<span class="badge res"> <small class="res" >5 Samples</small></span>-->
-                <!--</a>-->
-                <!--<div class="segmented-control" style="margin-top: 20px;">-->
-                    <!--<a class="control-item active res" href="#item1mobile">-->
-                        <!--<small class="res"> Add Sample</small>-->
-                    <!--</a>-->
-                    <!--<a class="control-item res" href="#item2mobile">-->
-                        <!--<small class="res"> View Asset </small>-->
-                    <!--</a>-->
-                    <!--<a class="control-item res" href="#item3mobile">-->
-                        <!--<small class="res">View Location</small>-->
-                    <!--</a>-->
-                <!--</div>-->
-            <!--</li>-->
         </ul>
     </div>
 </div>
