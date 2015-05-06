@@ -18,6 +18,7 @@
     <!-- Include the compiled Ratchet JS -->
 
     <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/environment.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/ratchet.js"></script>
     <script src="js/check_token.js"></script>
@@ -25,6 +26,7 @@
     <script type="text/javascript" src="js/jquery.fittext.js"></script>
     <script type="text/javascript" src="js/cusom.js"></script>
     <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
+    <script type="text/javascript" src="js/handlebars.form-helpers.min.js" ></script>
 
 
 </head>
@@ -39,7 +41,7 @@
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
     <nav class="bar bar-tab">
-        <a class="tab-item active" href="#">
+        <a id="home" class="tab-item active" href="#">
             <span class="icon icon-home"></span>
             <span class="tab-label res">Home</span>
         </a>
@@ -53,39 +55,133 @@
         </a>
     </nav>
     <h5 class="res" style="text-align: center;">Add New Sample</h5>
+    <div id="placeholder"></div>
     <p class="content-padded">  </p>
-    <div class="row" style="padding: 10px; margin-bottom: 12%">
-    <form>
-        <input type="text" placeholder="Sample Number">
-        <input type="text" placeholder="Sample Date">
-        <input type="text" placeholder="Enter Value Of h2">
-<input type="text" placeholder="Enter Value Of c2h4">
-<input type="text" placeholder="Enter Value Of Source Type">
-<input type="text" placeholder="Enter Value Of c2h2">
-<input type="text" placeholder="Enter Value Of ch4">
-<input type="text" placeholder="Enter Value Of co">
-<input type="text" placeholder="Enter Value Of c2h6">
-<input type="text" placeholder="Enter Value Of o2">
-<input type="text" placeholder="Enter Value Of co2">
-<input type="text" placeholder="Enter Value Of moisture">
+
+    <script id="content" type="text/x-handlebars-template">
+        <div class="row" style="padding: 10px; margin-bottom: 12%">
+            <form>
+                <input type="text" id="sample_number" placeholder="Sample Number">
+                <input type="text" id="sample_date" placeholder="Sample Date">
+                <input type="text" id="h2" placeholder="Enter Value Of h2">
+                <input type="text" id="c2h4" placeholder="Enter Value Of c2h4">
+
+                <input type="text" id="c2h2" placeholder="Enter Value Of c2h2">
+                <input type="text" id="ch4" placeholder="Enter Value Of ch4">
+                <input type="text" id="co" placeholder="Enter Value Of co">
+                <input type="text" id="c2h6" placeholder="Enter Value Of c2h6">
+                <input type="text" id="o2" placeholder="Enter Value Of o2">
+                <input type="text" id="n2" placeholder="Enter Value Of n2">
+                <input type="text" id="co2" placeholder="Enter Value Of co2">
+                <input type="text" id="moisture" placeholder="Enter Value Of moisture">
 
 
-        <button class="btn btn-positive btn-block res">Create Sample</button>
-    </form>
-    </div>
+                <button id="submit" class="btn btn-positive btn-block res">Create Sample</button>
+            </form>
+        </div>
+    </script>
 </div>
 
 
 <script>
 
-    // Lets add the authentication check and the prefilter shizz...
-    //    checkAuth();
-    //    prefilter();
-    //
-    //    $('#log_out').click(function(){
-    //        localStorage.clear();
-    //        window.location.href = "login.html";
-    //    });
+    checkAuth();
+    prefilter();
+
+    $('document').ready(function(){
+//            Lets send the ajax!! Plane flying over neeraj!! :)
+        // Lets see if the id exists
+
+        var source = $("#content").html();
+        var template = Handlebars.compile(source);
+        $('#placeholder').html(template);
+        var id = localStorage.getItem('asset_id');
+        if(id){
+
+            $('#submit').on('click', function(){
+//                alert(parseInt($("#h2").val()));
+                var sample_number = parseInt($("#sample_number").val());
+                var sample_date = $("#sample_date").val();
+
+              var h2 = parseInt($("#h2").val());
+                var c2h4 = parseInt($("#c2h4").val());
+                var c2h2 = parseInt($("#c2h2").val());
+                var ch4 = parseInt($("#ch4").val());
+                var co = parseInt($("#co").val());
+                var c2h6 = parseInt($("#c2h6").val());
+                var o2 = parseInt($("#o2").val());
+                var n2 = parseInt($("#n2").val());
+                var co2 = parseInt($("#co2").val());
+                var moisture = parseInt($("#moisture").val());
+
+                test = {
+                    sample: {
+                        sample_number: sample_number,
+                        sample_date: sample_date,
+                        source_type: 1,
+                        h2: h2,
+                        c2h4: c2h4,
+                        c2h2: c2h2,
+                        ch4: ch4,
+                        co: co,
+                        c2h6: c2h6,
+                        o2: o2,
+                        n2: n2,
+                        co2: co2,
+                        moisture: moisture
+                    }
+                };
+
+                alert(JSON.stringify(test));
+                $.ajax({
+
+                    url: apiUrl+'assets/'+id+'/samples',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        sample: {
+                                sample_number: sample_number,
+                                sample_date: sample_date,
+                                source_type: 1,
+                                h2: h2,
+                                c2h4: c2h4,
+                                c2h2: c2h2,
+                                ch4: ch4,
+                                co: co,
+                                c2h6: c2h6,
+                                o2: o2,
+                                n2: n2,
+                                co2: co2,
+                                moisture: moisture
+                        }
+                    },
+
+                    success: function(){
+                        alert('Data sent successfully!');
+                    },
+                    error: function(){
+                        alert('Something defnintely wrong...');
+                    }
+                });
+
+            });
+
+
+
+
+
+        }else{
+            alert('We dont have the id');
+            window.location = 'homepage.html';
+        }
+        $('#log_out').click(function(){
+            localStorage.clear();
+            window.location.href = "login.html";
+        });
+        $('#home').click(function(){
+            window.location.href = "homepage.html";
+        });
+    });
 
 
 </script>

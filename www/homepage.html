@@ -43,7 +43,7 @@
 </header>
 
 <nav class="bar bar-tab">
-    <a class="tab-item active" href="#">
+    <a id="home" class="tab-item active" href="#">
         <span class="icon icon-home"></span>
         <span class="tab-label res">Home</span>
     </a>
@@ -72,23 +72,23 @@
 
             {{#each asset}}
 
-            <li class="table-view-cell media">
-                <a class="navigate-right">
+            <li  class="table-view-cell media">
+                <a href="#"  class="test asset navigate-right">
                     <img class="media-object pull-left" src="img/health.jpg" width="100">
                     <div class="media-body">
                         <h5 class="res"> {{name}}</h5>
                         <small class="res">Serial No: {{serial_number}}</small>
                         <br/>
-                        <small class="res">Last DGA: 31.02.1992</small>
+                        <small class="res">Next DGA: {{next_dga}}</small>
                         <br/>
                     </div>
-                    <span class="badge res"> <small class="res" >5 Samples</small></span>
+                    <span data-id="{{id}}"  class="badge res total_sample"> <small class="res" >{{total_samples}}</small></span>
                 </a>
                 <div class="segmented-control" style="margin-top: 20px;">
-                    <a class="control-item  res" href="#item1mobile">
+                    <a data-id="{{id}}" class="add_sample control-item  res" href="#item1mobile">
                         <small class="res"> Add Sample</small>
                     </a>
-                    <a class="control-item res" href="#item2mobile">
+                    <a data-id="{{id}}"  class="control-item res view" href="#item2mobile">
                         <small class="res"> View Asset </small>
                     </a>
                     <a class="control-item res" href="#item3mobile">
@@ -128,6 +128,34 @@
                 var template = Handlebars.compile(content);
                 $('#placeholder').html(template(data));
 
+                $('.view').click(function(){
+//                window.location ='view_trans.html';
+//                console.log($(this).data('id'));
+                    // Setting the id in the local storage
+                    localStorage.setItem('asset_id',$(this).data('id'));
+                    // send the user to the page. :)
+                    window.location ='view_trans.html';
+                });
+                $('.total_sample').click(function(){
+//                window.location ='view_trans.html';
+//                console.log($(this).data('id'));
+                    // Setting the id in the local storage
+
+                    localStorage.setItem('asset_id',$(this).data('id'));
+
+                    // send the user to the page. :)
+                    window.location ='all_sample.html';
+                });
+                $('.add_sample').click(function(){
+//                window.location ='view_trans.html';
+//                console.log($(this).data('id'));
+                    // Setting the id in the local storage
+
+                    localStorage.setItem('asset_id',$(this).data('id'));
+
+                    // send the user to the page. :)
+                    window.location ='addsample.html';
+                });
 
             }).error(function(){
                 alert('Some error occurred.');
@@ -135,17 +163,19 @@
 
 
 
+
+
+
             $('#log_out').click(function(){
                 localStorage.clear();
                 window.location.href = "login.html";
             });
+            $('#home').click(function(){
+
+                window.location = "homepage.html";
+            });
 
         });
-
-
-
-
-
 
 
 

@@ -19,13 +19,13 @@
     <!-- Include the compiled Ratchet JS -->
 
     <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/environment.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/ratchet.js"></script>
     <script src="js/check_token.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery.fittext.js"></script>
     <script type="text/javascript" src="js/cusom.js"></script>
-
     <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
     <style>
 
@@ -142,7 +142,7 @@
 <div class="content">
     <nav class="bar bar-tab">
         <a class="tab-item active" href="#">
-            <span class="icon icon-home"></span>
+            <span id="home" class="icon icon-home"></span>
             <span class="tab-label res">Home</span>
         </a>
         <a class="tab-item" href="#">
@@ -156,61 +156,85 @@
     </nav>
     <h5 style="text-align: center;" class="res">View All Samples</h5>
     <p class="content-padded">  </p>
-    <div class="card" style="margin-bottom: 10%">
+    <div id="placeholder"></div>
 
-            <ul class="table-view">
-                <li class="table-view-cell">
-                    <a class="navigate-right">
-                        <span class="badge badge-primary res">Sample Number</span>
-                      <span class="res"> Sample Date </span>
-                    </a>
-                </li>
-                <li class="table-view-cell">
-                    <a class="navigate-right res">
-                        <span class="badge res">1</span>
-                        13-12-2014
-                    </a>
-                </li>
-                <li class="table-view-cell">
-                    <a class="navigate-right res">
-                        <span class="badge res">2</span>
-                        23-1-2015
-                    </a>
-                </li>
-                <li class="table-view-cell">
-                    <a class="navigate-right res">
-                        <span class="badge res">3</span>
-                        24-2-2015
-                    </a>
-                </li>
-                <li class="table-view-cell">
-                    <a class="navigate-right res">
-                        <span class="badge res">4</span>
-                        30-3-2015
-                    </a>
-                </li>
-                <li class="table-view-cell">
-                    <a class="navigate-right res">
-                        <span class="badge res">5</span>
-                       31-4-2015
-                    </a>
-                </li>
-            </ul>
+    <script type="text/x-handlebars-template" id="content">
+        <div class="card" style="margin-bottom: 10%">
 
-    </div>
+        <ul class="table-view">
+
+        <li class="table-view-cell">
+        <a class="navigate-right">
+        <span class="badge badge-primary res">Sample Number</span>
+        <span class="res"> Sample Date </span>
+        </a>
+        </li>
+            {{#each sample}}
+        <li  class=" table-view-cell">
+
+        <a data-id="{{id}}" class="sample navigate-right res">
+        <span class="badge res">{{id}}</span>
+       {{sample_date}}
+        </a>
+
+        </li>
+            {{/each}}
+        </ul>
+
+        </div>
+    </script>
 </div>
 
 
 <script>
 
-    // Lets add the authentication check and the prefilter shizz...
-    //    checkAuth();
-    //    prefilter();
-    //
-    //    $('#log_out').click(function(){
-    //        localStorage.clear();
-    //        window.location.href = "login.html";
-    //    });
+    checkAuth();
+    prefilter();
+
+
+    $('document').ready(function(){
+        var id = localStorage.getItem('asset_id');
+        if(id){
+            $.ajax({
+                type: 'get',
+                url: apiUrl +'assets/'+id+'/samples',
+
+//                beforeSend: function(){
+//                    We can add the spinner here...
+//                },
+                success: function(data){
+                    console.log(JSON.stringify(data));
+                    var content   = $("#content").html();
+                    var template = Handlebars.compile(content);
+                    $('#placeholder').html(template(data));
+
+//                    alert(JSON.stringify(data));
+                    $('.sample').click(function(){
+//                window.location ='view_trans.html';
+//                console.log($(this).data('id'));
+                        // Setting the id in the local storage
+                        localStorage.setItem('sample_id',$(this).data('id'));
+
+                        // send the user to the page. :)
+                        window.location ='sample_show.html';
+                    });
+                }
+            }).error(function(){
+                alert('Some error occurred.');
+            });
+        }else{
+            alert('We dont have the id');
+            window.location = 'homepage.html';
+        }
+
+        $('#log_out').click(function(){
+            localStorage.clear();
+            window.location.href = "login.html";
+        });
+        $('#home').click(function(){
+            window.location.href = "homepage.html";
+        });
+    });
 
 
 </script>
