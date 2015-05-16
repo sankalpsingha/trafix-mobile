@@ -1,6 +1,6 @@
 // This is the environment JS file covering all the Settings.
 // You can keep adding here as we go along.
-host = "http://localhost:3000/";
+host = "http://www.trafixsoft.com/";
 namespace = "api/v1/";
 loginUrl = host + "/token";
 
