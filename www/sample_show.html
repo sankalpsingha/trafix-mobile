@@ -134,7 +134,7 @@
 
 <!-- Make sure all your bars are the first things in your <body> -->
 <header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left"></a>
+    <a id="back" class="icon icon-left-nav pull-left"></a>
     <a class="icon icon-compose pull-right"></a>
     <h1 class="title res">Trafix</h1>
 </header>
@@ -145,10 +145,7 @@
             <span class="icon icon-home"></span>
             <span class="tab-label res">Home</span>
         </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-person"></span>
-            <span class="tab-label res">Profile</span>
-        </a>
+
         <a class="tab-item" href="#" id="log_out">
             <span class="icon icon-gear"></span>
             <span class="tab-label res">Log Out</span>
@@ -160,9 +157,9 @@
         <h5 class="res" style="text-align: center;">Sample Number:{{sample.id}}</h5>
         <div style="padding: 10px;">
             <div class="segmented-control">
-                <a class="control-item   btn-primary " style="color: #ffffff"> <small class="res">Roger's Ratio</small></a>
-                <a class="control-item btn-positive" style="color: #ffffff"><small class="res">IEEE Ratios</small></a>
-                <a class="control-item btn-negative" style="color: #ffffff"><small class="res">Additional Ratios</small></a>
+                <a id="roger" class="control-item   btn-primary " style="color: #ffffff"> <small class="res">Roger's Ratio</small></a>
+                <a id="ieee" class="control-item btn-positive" style="color: #ffffff"><small class="res">IEEE Ratios</small></a>
+                <a id="additional" class="control-item btn-negative" style="color: #ffffff"><small class="res">Additional Ratios</small></a>
             </div>
         </div>
         <p class="content-padded">  </p>
@@ -247,6 +244,18 @@
                     var content   = $("#template").html();
                     var template = Handlebars.compile(content);
                     $('#placeholder').html(template(data));
+                    $('#roger').click(function(){
+
+                        window.location.href = "rogers.html";
+                    });
+                    $('#ieee').click(function(){
+
+                        window.location.href = "ieee.html";
+                    });
+                    $('#additional').click(function(){
+
+                        window.location.href = "additional.html";
+                    });
 
 //                    alert(JSON.stringify(data));
                 }
@@ -262,6 +271,10 @@
         $('#log_out').click(function(){
             localStorage.clear();
             window.location.href = "login.html";
+        });
+        $('#back').click(function(){
+
+            window.location.href = "all_sample.html";
         });
         $('#home').click(function(){
             window.location.href = "homepage.html";

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css"/>
+
+
+
+    <!-- Include the compiled Ratchet JS -->
+
+    <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/environment.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/ratchet.js"></script>
+    <script src="js/check_token.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="js/cusom.js"></script>
+    <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=API_KEY&sensor=true"></script>
+
+    <style>
+
+
+        html, body, #map
+        {
+            height: 100%;
+        }
+        #map
+        {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<!-- Make sure all your bars are the first things in your <body> -->
+<header class="bar bar-nav">
+    <a id="back" class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-compose pull-right"></a>
+    <h1 class="title res">Trafix</h1>
+</header>
+<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+<div class="content">
+    <nav class="bar bar-tab">
+        <a id="home" class="tab-item " href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label res">Home</span>
+        </a>
+
+        <a class="tab-item" href="#" id="log_out">
+            <span class="icon icon-gear"></span>
+            <span class="tab-label res">Log Out</span>
+        </a>
+    </nav>
+    <h5 class="res" style="text-align: center;" >View Asset</h5>
+
+
+    <p class="content-padded">  </p>
+
+
+    <div id="placeholder"></div>
+
+
+
+
+    <div id="map"></div>
+</div>
+
+
+<script>
+
+
+
+
+
+    checkAuth();
+    prefilter();
+
+
+    $('document').ready(function(){
+//            Lets send the ajax!! Plane flying over neeraj!! :)
+        // Lets see if the id exists
+        var id = localStorage.getItem('asset_id');
+        if(id){
+
+
+            $.ajax({
+                type: 'get',
+                url: apiUrl +'assets/' + id,
+
+//                beforeSend: function(){
+//                    We can add the spinner here...
+//                },
+                success: function(data){
+//                    var content   = $("#content").html();
+//                    var template = Handlebars.compile(content);
+//                    $('#placeholder').html(template(data));
+                    var lat = data.asset.substation.latitude
+                    var long = data.asset.substation.longitude;
+
+                    function initializeMap() {
+                        // this is where the custom code will go for each mapping implementation
+
+                        var mapOptions = {
+                            center: new google.maps.LatLng(lat, long),
+                            zoom: 11,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                    }
+                    document.addEventListener('deviceready', initializeMap, false);
+//                    alert(JSON.stringify(data));
+                }
+            }).error(function(){
+                alert('Some error occurred.');
+            });
+        }else{
+            alert('We dont have the id');
+            window.location = 'homepage.html';
+        }
+        $('#log_out').click(function(){
+            localStorage.clear();
+            window.location.href = "login.html";
+        });
+        $('#back').click(function(){
+
+            window.location.href = "homepage.html";
+        });
+        $('#home').click(function(){
+            window.location.href = "homepage.html";
+        });
+    });
+</script>
+</body>
+</html>

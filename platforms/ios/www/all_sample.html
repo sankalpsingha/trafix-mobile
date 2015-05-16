@@ -134,7 +134,7 @@
 
 <!-- Make sure all your bars are the first things in your <body> -->
 <header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left"></a>
+    <a id="back" class="icon icon-left-nav pull-left"></a>
     <a class="icon icon-compose pull-right"></a>
     <h1 class="title res">Trafix</h1>
 </header>
@@ -230,6 +230,10 @@
         $('#log_out').click(function(){
             localStorage.clear();
             window.location.href = "login.html";
+        });
+        $('#back').click(function(){
+
+            window.location.href = "homepage.html";
         });
         $('#home').click(function(){
             window.location.href = "homepage.html";

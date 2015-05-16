@@ -3,22 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>Ratchet template page</title>
-
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
     <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <!-- Include the compiled Ratchet CSS -->
     <link href="css/ratchet.css" rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css"/>
 
 
+
     <!-- Include the compiled Ratchet JS -->
 
     <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/environment.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/ratchet.js"></script>
     <script src="js/check_token.js"></script>
@@ -27,7 +26,6 @@
     <script type="text/javascript" src="js/cusom.js"></script>
     <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
     <style>
-
         legend {
             padding: 0;
             border: 0;
@@ -37,14 +35,11 @@
             width: 100%;
             padding: 0;
             margin-bottom: 20px;
-
             line-height: inherit;
             color: #333;
             border: 0;
             border-bottom: 1px solid #e5e5e5;
         }
-
-
         table {
             border-spacing: 0;
             border-collapse: collapse;
@@ -60,7 +55,6 @@
         .table th {
             background-color: #fff !important;
         }
-
         table {
             background-color: transparent;
         }
@@ -107,8 +101,6 @@
         .table .table {
             background-color: #fff;
         }
-
-
         .table > thead > tr > td.active,
         .table > tbody > tr > td.active,
         .table > tfoot > tr > td.active,
@@ -123,29 +115,22 @@
         .table > tfoot > tr.active > th {
             background-color: #f5f5f5;
         }
-
     </style>
-
 </head>
 <body>
-
 <!-- Make sure all your bars are the first things in your <body> -->
 <header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-left-nav pull-left" id="back"> </a>
     <a class="icon icon-compose pull-right"></a>
     <h1 class="title res">Trafix</h1>
 </header>
-<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
     <nav class="bar bar-tab">
-        <a class="tab-item active" href="#">
+        <a id="home" class="tab-item active" href="#">
             <span class="icon icon-home"></span>
             <span class="tab-label res">Home</span>
         </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-person"></span>
-            <span class="tab-label res">Profile</span>
-        </a>
+
         <a class="tab-item" href="#" id="log_out">
             <span class="icon icon-gear"></span>
             <span class="tab-label res">Log Out</span>
@@ -153,122 +138,149 @@
     </nav>
     <h5 class="res" style="text-align: center;">Diagnostics Page</h5>
     <p class="content-padded">  </p>
-   <div class="card" style="margin-bottom: 13%">
-       <ul class="table-view" style="text-align: center">
-           <li class="table-view-cell ">
+    <div id="placeholder"></div>
+    <script type="text/x-handlebars-template" id="content">
+        <div class="card" style="margin-bottom: 13%">
+            <ul class="table-view" style="text-align: center">
+                <li class="table-view-cell ">
+                    <img class="media-object pull-left" src="img/health.jpg" width="40%">
+                    <div class="media-body">
+                        <h5 class="res"> IVTR 1023INT</h5>
+                        <small class="res">Serial No: ivtr2001001</small>
+                        <br/>
+                        <small class="res">Last DGA: 31.02.1992</small>
+                        <br/>
+                        <small class="res">Next DGA: 31.07.2005</small>
+                        <br/>
+                        <small class="res">Nuber Of Samples: 21</small>
+                        <br/>
+                    </div>
+                    <p>PPM Change</p>
+                    <table class=" table table-striped " >
+                        <thead>
+                        <tr>
+                            <th class="res">Parameters</th>
+                            <th class="res">Values</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="res" style="text-align: center"><small class="res">Date <br/>(Last- Second Last Sample)</small></td>
+                            <td><small class="res">{{diagnostics.ppm_report.change_ppm.last_date}} - {{diagnostics.ppm_report.change_ppm.second_last_date}}</small></td>
+                        </tr>
+                        <tr>
+                            <td class="res">H2</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.H2}}</td>
+                        </tr>
+                        <tr>
+                            <td class="res">CH4</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.CH4}}</td>
+                        </tr>
+                        <tr>
+                            <td class="res">C2H6</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.C2H6}}</td>
+                        </tr>
+                        <tr>
+                            <td class="res">C2H4</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.C2H4}}</td>
+                        </tr>
+                        <tr>
+                            <td class="res">C2H2</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.C2H2}}</td>
+                        </tr>
+                        <tr>
+                            <td class="res">O2</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.O2}}</td>
+                        </tr>
+                        <tr>
+                            <td class="res">N2</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.N2}}</td>
+                        </tr>
+                        <tr>
+                            <td class="res">CO2</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.CO2}}</td>
+                        </tr>
+                        <tr>
+                            <td class="res">CO</td>
+                            <td class="res">{{diagnostics.ppm_report.change_ppm.CO}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>IEEE Recommendations</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Parameters</th>
+                            <th>Values</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Last Sample date</td>
+                            <td>{{diagnostics.ppm_report.change_ppm.last_date}}</td>
+                        </tr>
+                        <tr>
+                            <td>TDCG</td>
+                            <td>{{diagnostics.ppm_report.change_ppm.recommendation.tdcg}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-                   <img class="media-object pull-left" src="img/health.jpg" width="40%">
-                   <div class="media-body">
-                       <h5 class="res"> IVTR 1023INT</h5>
-                       <small class="res">Serial No: ivtr2001001</small>
-                       <br/>
-                       <small class="res">Last DGA: 31.02.1992</small>
-                       <br/>
-                       <small class="res">Next DGA: 31.07.2005</small>
-                       <br/>
-                       <small class="res">Nuber Of Samples: 21</small>
-                       <br/>
-                   </div>
+                    <h6>IEEE recommendation</h6>
+                    <small><span style="font-weight: 300">TDCG action based condition : {{diagnostics.ppm_report.change_ppm.recommendation.condition}}</span>
+                        <br/>
 
-             <table class=" table table-striped " >
-                 <thead>
-                 <tr>
-                     <th class="res">Parameters</th>
-                     <th class="res">Values</th>
-                 </tr>
-                 </thead>
-                 <tbody>
-                 <tr>
-                     <td class="res" style="text-align: center"><small class="res">Date <br/>(Last- Second Last Sample)</small></td>
-                     <td><small class="res">2015-04-05 - 2015-04-04</small></td>
-                 </tr>
-                 <tr>
-                     <td class="res">H2</td>
-                     <td class="res">10</td>
-                 </tr>
-                 <tr>
-                     <td class="res">CH4</td>
-                     <td class="res">22</td>
-                 </tr>
-                 <tr>
-                     <td class="res">C2H6</td>
-                     <td class="res">32</td>
-                 </tr>
-                 <tr>
-                     <td class="res">C2H4</td>
-                     <td class="res">32</td>
-                 </tr>
-                 <tr>
-                     <td class="res">C2H2</td>
-                     <td class="res">54</td>
-                 </tr>
-                 <tr>
-                     <td class="res">O2</td>
-                     <td class="res">435</td>
-                 </tr>
-                 <tr>
-                     <td class="res">N2</td>
-                     <td class="res">53</td>
-                 </tr>
-                 <tr>
-                     <td class="res">CO2</td>
-                     <td class="res">53</td>
-                 </tr>
-                 <tr>
-                     <td class="res">CO</td>
-                     <td class="res">53</td>
-                 </tr>
-                 </tbody>
-             </table>
+                        {{diagnostics.ppm_report.change_ppm.recommendation.ieee_text}}</small>
 
+                </li>
+            </ul>
+        </div>
+    </script>
 
-
-
-
-               <table class="table">
-                   <thead>
-                   <tr>
-                       <th>Parameters</th>
-                       <th>Values</th></tr>
-                   </thead>
-                   <tbody>
-                   <tr>
-                       <td>Last Sample date</td>
-                       <td>11.11.4331</td>
-                   </tr>
-                   <tr>
-                       <td>TDCG</td>
-                       <td>296</td>
-                   </tr>
-
-                   </tbody>
-               </table>
-
-               <h6>IEEE recommendation</h6>
-               <small><span style="font-weight: 300">TDCG action based condition : Condition 1</span>
-                   <br/>
-
-                   Continue Normal Operations (OPA). The transformer is working normally.</small>
-
-           </li>
-       </ul>
-   </div>
 </div>
 
 
 <script>
 
-    // Lets add the authentication check and the prefilter shizz...
-    //    checkAuth();
-    //    prefilter();
-    //
-    //    $('#log_out').click(function(){
-    //        localStorage.clear();
-    //        window.location.href = "login.html";
-    //    });
+
+    checkAuth();
+    prefilter();
 
 
+    $('document').ready(function(){
+//            Lets send the ajax!! Plane flying over neeraj!! :)
+        // Lets see if the id exists
+        var id = localStorage.getItem('asset_id');
+        if(id){
+
+
+            $.ajax({
+                type: 'get',
+                url: apiUrl +'assets/' + id+ '/diagnostics',
+                success: function(data){
+                    var content   = $("#content").html();
+                    var template = Handlebars.compile(content);
+                    $('#placeholder').html(template(data));
+//                    alert(JSON.stringify(data));
+                }
+            }).error(function(){
+                alert('Some error occurred.');
+            });
+        }else{
+            alert('We dont have the id');
+            window.location = 'homepage.html';
+        }
+        $('#log_out').click(function(){
+            localStorage.clear();
+            window.location.href = "login.html";
+        });
+        $('#back').click(function(){
+
+            window.location.href = "homepage.html";
+        });
+        $('#home').click(function(){
+            window.location.href = "homepage.html";
+        });
+    });
 </script>
-
 </body>
 </html>

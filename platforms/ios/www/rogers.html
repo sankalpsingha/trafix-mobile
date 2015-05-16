@@ -19,6 +19,7 @@
     <!-- Include the compiled Ratchet JS -->
 
     <!--This is the standard that has to be there in every goddam page.-->
+    <script src="js/environment.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/ratchet.js"></script>
     <script src="js/check_token.js"></script>
@@ -133,15 +134,15 @@
 
 <!-- Make sure all your bars are the first things in your <body> -->
 <header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left"></a>
+    <a id="back" class="icon icon-left-nav pull-left" ></a>
     <a class="icon icon-compose pull-right"></a>
     <h1 class="title res">Trafix</h1>
 </header>
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
     <nav class="bar bar-tab">
-        <a class="tab-item active" href="#">
-            <span class="icon icon-home"></span>
+        <a class="tab-item active" id="home" href="#">
+            <span class="icon icon-home" ></span>
             <span class="tab-label res">Home</span>
         </a>
         <a class="tab-item" href="#">
@@ -154,50 +155,101 @@
         </a>
     </nav>
     <h5 class="res" style="text-align: center;">Rogers Ratio</h5>
-
-    <p class="content-padded res" style="text-align: center;"> Sample Number: 213 </p>
-    <div class="card" style="margin-bottom: 10%; text-align: center;">
+    <div id="placeholder"></div>
+    <script id="template" type="text/x-handlebars-template">
+        <p class="content-padded res" style="text-align: center;"> Sample Number: {{sample.id}} </p>
+        <div class="card" style="margin-bottom: 10%; text-align: center;">
         <table class="table">
-            <tr>
-                <th class="res" style="text-align: center;">Gas </th>
-                <th class="res" style="text-align: center;">Value</th>
-            </tr>
-            <tr>
-                <td class="res">CH4/H2</td>
-                <td class="res">1</td>
-            </tr>
+        <tr>
+        <th class="res" style="text-align: center;">Gas </th>
+        <th class="res" style="text-align: center;">Value</th>
+        </tr>
+        <tr>
+        <td class="res">CH4/H2</td>
+        <td class="res">{{math sample.ch4 "/" sample.h2}}</td>
+        </tr>
 
-            <tr>
-                <td class="res">C2H6/CH4</td>
-                <td class="res">33</td>
-            </tr>
-            <tr>
-                <td class="res">C2H4/C2H6</td>
-                <td class="res">23</td>
-            </tr>
-            <tr>
-                <td class="res">C2H2/C2H4</td>
-                <td class="res">53</td>
-            </tr>
-            <tr>
-                <td class="res">CO/CO2</td>
-                <td class="res">234</td>
-            </tr>
+        <tr>
+        <td class="res">C2H6/CH4</td>
+        <td class="res">{{math sample.c2h6 "/" sample.ch4}}</td>
+        </tr>
+        <tr>
+        <td class="res">C2H4/C2H6</td>
+        <td class="res">{{math sample.c2h4 "/" sample.c2h6}}</td>
+        </tr>
+        <tr>
+        <td class="res">C2H2/C2H4</td>
+        <td class="res">{{math sample.c2h2 "/" sample.c2h4}}</td>
+        </tr>
+        <tr>
+        <td class="res">CO/CO2</td>
+        <td class="res">{{math sample.co "/" sample.co2}}</td>
+        </tr>
         </table>
-    </div>
+        </div>
+    </script>
+
+
+
+
 </div>
 <script>
 
-    // Lets add the authentication check and the prefilter shizz...
-    //    checkAuth();
-    //    prefilter();
-    //
-    //    $('#log_out').click(function(){
-    //        localStorage.clear();
-    //        window.location.href = "login.html";
-    //    });
+    checkAuth();
+    prefilter();
+    $('document').ready(function(){
+        var id = localStorage.getItem('asset_id');
+        var id2 = localStorage.getItem('sample_id');
+        if(id && id2 ){
 
 
+            $.ajax({
+                type: 'get',
+                url: apiUrl +'assets/'+id+'/samples/'+id2,
+
+//                beforeSend: function(){
+//                    We can add the spinner here...
+//                },
+                success: function(data){
+                    console.log(JSON.stringify(data));
+                    var content   = $("#template").html();
+                    var template = Handlebars.compile(content);
+                    Handlebars.registerHelper('math', function(lvalue, operator, rvalue) {
+                        lvalue = parseFloat(lvalue);
+                        rvalue = parseFloat(rvalue);
+                        return {
+                            '+': lvalue + rvalue,
+                            '-': lvalue - rvalue,
+                            '*': lvalue * rvalue,
+                            '/': (lvalue / rvalue).toFixed(2),
+                            '%': lvalue % rvalue
+                        }[operator];
+                    });
+                    $('#placeholder').html(template(data));
+
+//                    alert(JSON.stringify(data));
+                }
+            }).error(function(){
+                alert('Some error occurred.');
+            });
+        }else{
+            alert('We dont have the id');
+            window.location = 'homepage.html';
+        }
+
+
+        $('#log_out').click(function(){
+            localStorage.clear();
+            window.location.href = "login.html";
+        });
+        $('#back').click(function(){
+
+            window.location.href = "sample_show.html";
+        });
+        $('#home').click(function(){
+            window.location.href = "homepage.html";
+        });
+    });
 </script>
 
 </body>

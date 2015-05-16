@@ -127,10 +127,7 @@
             <span class="icon icon-home"></span>
             <span class="tab-label res">Home</span>
         </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-person"></span>
-            <span class="tab-label res">Profile</span>
-        </a>
+
         <a class="tab-item" href="#" id="log_out">
             <span class="icon icon-gear"></span>
             <span class="tab-label res">Log Out</span>
@@ -167,9 +164,9 @@
 
             </ul>
             <div class="segmented-control">
-                <a class="control-item   btn-primary res" style="color: #ffffff"><small>All Samples</small></a>
-                <a class="control-item btn-positive res" style="color: #ffffff"><small>View In Map</small></a>
-                <a class="control-item btn-negative res" style="color: #ffffff"><small>Edit Asset</small></a>
+                <a id="all_sample" class="control-item   btn-primary res" style="color: #ffffff"><small>All Samples</small></a>
+                <a id="map" class="control-item btn-positive res" style="color: #ffffff"><small>View In Map</small></a>
+                <a id="add_sample" class="control-item btn-negative res" style="color: #ffffff"><small>Add Sample</small></a>
             </div>
             <table>
 
@@ -262,6 +259,18 @@
                     var content   = $("#content").html();
                     var template = Handlebars.compile(content);
                     $('#placeholder').html(template(data));
+                    $('#all_sample').click(function(){
+
+                        window.location.href = "all_sample.html";
+                    });
+                    $('#map').click(function(){
+
+                        window.location.href = "map.html";
+                    });
+                    $('#add_sample').click(function(){
+
+                        window.location.href = "addsample.html";
+                    });
 
 //                    alert(JSON.stringify(data));
                 }

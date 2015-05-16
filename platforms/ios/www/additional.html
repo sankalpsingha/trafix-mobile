@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/theme.css"/>
 
 
-
     <!-- Include the compiled Ratchet JS -->
 
     <!--This is the standard that has to be there in every goddam page.-->
@@ -25,12 +24,30 @@
     <script src="js/ratchet.js"></script>
     <script src="js/check_token.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
     <script type="text/javascript" src="js/jquery.fittext.js"></script>
     <script type="text/javascript" src="js/cusom.js"></script>
-    <script type="text/javascript" src="js/handlebars-v3.0.3.js" ></script>
     <style>
 
+        legend {
+            padding: 0;
+            border: 0;
+        }
+        legend {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
 
+            line-height: inherit;
+            color: #333;
+            border: 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        table .table-striped  tbody  tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
         table {
             border-spacing: 0;
             border-collapse: collapse;
@@ -109,22 +126,23 @@
         .table > tfoot > tr.active > th {
             background-color: #f5f5f5;
         }
+
     </style>
+
 </head>
 <body>
 
-
 <!-- Make sure all your bars are the first things in your <body> -->
 <header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left"></a>
+    <a id="back" class="icon icon-left-nav pull-left" ></a>
     <a class="icon icon-compose pull-right"></a>
     <h1 class="title res">Trafix</h1>
 </header>
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
     <nav class="bar bar-tab">
-        <a id="home" class="tab-item " href="#">
-            <span class="icon icon-home"></span>
+        <a class="tab-item active" id="home" href="#">
+            <span class="icon icon-home" ></span>
             <span class="tab-label res">Home</span>
         </a>
         <a class="tab-item" href="#">
@@ -136,144 +154,78 @@
             <span class="tab-label res">Log Out</span>
         </a>
     </nav>
-    <h5 class="res" style="text-align: center;" >View Asset</h5>
-
-
-    <p class="content-padded">  </p>
-
-
+    <h5 class="res" style="text-align: center;">Additional Ratios</h5>
     <div id="placeholder"></div>
+    <script id="template" type="text/x-handlebars-template">
+        <p class="content-padded res" style="text-align: center;"> Sample Number: {{sample.id}} </p>
+        <div class="card" style="margin-bottom: 10%; text-align: center;">
+            <table class="table">
+                <tr>
+                    <th class="res" style="text-align: center;">Gas </th>
+                    <th class="res" style="text-align: center;">Value</th>
+                </tr>
+                <tr>
+                    <td class="res">CH4/H2</td>
+                    <td class="res">{{math sample.ch4 "/" sample.h2}}</td>
+                </tr>
 
-
-    <script id="content" type="text/x-handlebars-template" >
-
-        <div class="card" style="margin-bottom: 10% ;padding: 5px;">
-            <ul class="table-view" >
-                <li class="table-view-cell ">
-
-                    <img class="media-object pull-left" src="img/transformer.jpg" width="40%">
-                    <div class="media-body">
-                        <h6 class="res">Name:{{asset.name}}</h6>
-                        <small class="res">Serial No: {{asset.serial_number}}</small>
-                        <br/>
-                        <small class="res">Location: {{asset.location}}</small>
-                        <br/>
-                        <small class="res">Alarm Set: {{asset.alarm_type}}</small>
-                        <br/>
-                        <small class="res">Substation: {{asset.substation.location}}</small>
-                        <br/>
-                    </div>
-                </li>
-
-            </ul>
-            <div class="segmented-control">
-                <a id="all_sample" class="control-item   btn-primary res" style="color: #ffffff"><small>All Samples</small></a>
-                <a id="map" class="control-item btn-positive res" style="color: #ffffff"><small>View In Map</small></a>
-                <a id="add_sample" class="control-item btn-negative res" style="color: #ffffff"><small>Add Sample</small></a>
-            </div>
-            <table>
-
+                <tr>
+                    <td class="res">C2H6/CH4</td>
+                    <td class="res">{{math sample.c2h6 "/" sample.ch4}}</td>
+                </tr>
+                <tr>
+                    <td class="res">C2H4/C2H6</td>
+                    <td class="res">{{math sample.c2h4 "/" sample.c2h6}}</td>
+                </tr>
+                <tr>
+                    <td class="res">C2H2/C2H4</td>
+                    <td class="res">{{math sample.c2h2 "/" sample.c2h4}}</td>
+                </tr>
+                <tr>
+                    <td class="res">CO/CO2</td>
+                    <td class="res">{{math sample.co "/" sample.co2}}</td>
+                </tr>
             </table>
-            <h5 class="res" style="text-align: center;">Other Details</h5>
-            <div style="text-align: center;">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th class="res"  style="text-align: center">Parameters</th>
-                        <th class="res"  style="text-align: center">Values</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="res" >Oil Volume</td>
-                        <td class="res" >{{asset.oil_volume}}</td>
-                    </tr>
-                    <tr>
-                        <td class="res" >Oil Type</td>
-                        <td class="res" >{{asset.oil_type}}</td>
-                    </tr>
-                    <tr>
-                        <td class="res" >Oil Preservation</td>
-                        <td class="res" >{{asset.oil_preservation_system}}</td>
-                    </tr>
-                    <tr>
-                        <td class="res" >KV</td>
-                        <td class="res" >{{asset.kv}}</td>
-                    </tr>
-                    <tr>
-                        <td class="res" >MVA</td>
-                        <td class="res" >{{asset.mva}}</td>
-                    </tr>
-                    <tr>
-                        <td class="res" >Paper Type</td>
-                        <td class="res" >{{asset.paper_type}}</td>
-                    </tr>
-                    <tr>
-                        <td class="res" >Paper Quantity</td>
-                        <td class="res" >{{asset.paper_quantity}}</td>
-                    </tr>
-                    <tr>
-                        <td class="res" >Manufacturer</td>
-                        <td class="res" >{{asset.equipment_manufacturer}}</td>
-                    </tr>
-                    <tr>
-                        <td class="res" >Year Of Manufacture	</td>
-                        <td class="res" >{{asset.year_of_manufacture}}</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </script>
 
 
+
+
 </div>
-
-
 <script>
-
-
-
-
 
     checkAuth();
     prefilter();
-
-
     $('document').ready(function(){
-//            Lets send the ajax!! Plane flying over neeraj!! :)
-        // Lets see if the id exists
         var id = localStorage.getItem('asset_id');
-        if(id){
+        var id2 = localStorage.getItem('sample_id');
+        if(id && id2 ){
 
 
             $.ajax({
                 type: 'get',
-               url: apiUrl +'assets/' + id,
+                url: apiUrl +'assets/'+id+'/samples/'+id2,
 
 //                beforeSend: function(){
 //                    We can add the spinner here...
 //                },
                 success: function(data){
-                    var content   = $("#content").html();
+                    console.log(JSON.stringify(data));
+                    var content   = $("#template").html();
                     var template = Handlebars.compile(content);
+                    Handlebars.registerHelper('math', function(lvalue, operator, rvalue) {
+                        lvalue = parseFloat(lvalue);
+                        rvalue = parseFloat(rvalue);
+                        return {
+                            '+': lvalue + rvalue,
+                            '-': lvalue - rvalue,
+                            '*': lvalue * rvalue,
+                            '/': (lvalue / rvalue).toFixed(2),
+                            '%': lvalue % rvalue
+                        }[operator];
+                    });
                     $('#placeholder').html(template(data));
-                    $('#all_sample').click(function(){
-
-                        window.location.href = "all_sample.html";
-                    });
-                    $('#map').click(function(){
-
-                        window.location.href = "map.html";
-                    });
-                    $('#add_sample').click(function(){
-
-                        window.location.href = "addsample.html";
-                    });
 
 //                    alert(JSON.stringify(data));
                 }
@@ -284,14 +236,21 @@
             alert('We dont have the id');
             window.location = 'homepage.html';
         }
+
+
         $('#log_out').click(function(){
             localStorage.clear();
             window.location.href = "login.html";
+        });
+        $('#back').click(function(){
+
+            window.location.href = "sample_show.html";
         });
         $('#home').click(function(){
             window.location.href = "homepage.html";
         });
     });
 </script>
+
 </body>
 </html>

@@ -34,7 +34,7 @@
 
 <!-- Make sure all your bars are the first things in your <body> -->
 <header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left"></a>
+    <a id="back" class="icon icon-left-nav pull-left"></a>
     <a class="icon icon-compose pull-right"></a>
     <h1 class="title res">Trafix</h1>
 </header>
@@ -45,10 +45,7 @@
             <span class="icon icon-home"></span>
             <span class="tab-label res">Home</span>
         </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-person"></span>
-            <span class="tab-label res">Profile</span>
-        </a>
+
         <a class="tab-item" href="#" id="log_out">
             <span class="icon icon-gear"></span>
             <span class="tab-label res">Log Out</span>
@@ -160,7 +157,9 @@
                         alert('Data sent successfully!');
                     },
                     error: function(){
-                        alert('Something defnintely wrong...');
+                        alert('Sample Created');
+                        window.location.href = "homepage.html";
+
                     }
                 });
 
@@ -177,6 +176,10 @@
         $('#log_out').click(function(){
             localStorage.clear();
             window.location.href = "login.html";
+        });
+        $('#back').click(function(){
+
+            window.location.href = "homepage.html";
         });
         $('#home').click(function(){
             window.location.href = "homepage.html";
